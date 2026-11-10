@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payments Video Library</title>
+<style>
+:root{--bg:#f7f7f8;--card:#ffffff;--ink:#18181b;--mute:#52525b;--line:#e4e4e7;--accent:#4338ca;--s4:#4338ca;--s3:#0f766e;--s2:#b4532a;--s1:#1e6f6a;--sD:#6b21a8;--chip:#f4f4f5}
+@media (prefers-color-scheme:dark){:root{--bg:#0b0b0f;--card:#17171c;--ink:#f4f4f5;--mute:#a1a1aa;--line:#2a2a33;--chip:#23232b;--accent:#a5b4fc;--s4:#818cf8;--s3:#2dd4bf;--s2:#fb923c;--s1:#5eead4;--sD:#c084fc}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif}
+header{padding:28px 24px 8px;max-width:1240px;margin:0 auto}
+h1{margin:0 0 4px;font-size:28px}.sub{color:var(--mute);margin:0 0 16px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;font:inherit}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+input[type=search]{flex:1;min-width:200px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 12px;font:inherit}
+main{max-width:1240px;margin:0 auto;padding:8px 24px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;border:0;padding:0;cursor:pointer;background:#000;aspect-ratio:16/9;display:block;width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.thumb:hover img{opacity:1}
+.play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);color:#18181b;display:grid;place-items:center;font-size:22px;padding-left:4px}
+.dur{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.75);color:#fff;border-radius:6px;padding:2px 8px;font-size:13px}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tags{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;color:#fff}
+.tag.s4{background:var(--s4)}.tag.s3{background:var(--s3)}.tag.s2{background:var(--s2)}.tag.s1{background:var(--s1)}.tag.sD{background:var(--sD)}
+.tag.t{background:var(--chip);color:var(--mute)}.date{color:var(--mute);font-size:13px;margin-left:auto}
+h2{font-size:18px;margin:4px 0 0}.about{margin:0;color:var(--ink)}.ver{margin:0;color:var(--mute);font-size:13px}
+.actions{display:flex;gap:8px;margin-top:6px}
+.btn{background:var(--accent);color:#fff;text-decoration:none;border-radius:9px;padding:6px 14px;font-weight:600;font-size:14px}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}
+details{margin-top:6px;border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;color:var(--mute);font-size:14px}
+details ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+details li{display:flex;flex-direction:column;font-size:14px}details li a{color:var(--accent)}details li span{color:var(--mute);font-size:12px}
+.none{color:var(--mute);font-size:13px;margin:6px 0 0}
+.key{max-width:1240px;margin:0 auto;padding:0 24px 32px;color:var(--mute);font-size:13px}
+dialog{border:0;border-radius:14px;padding:0;width:min(1100px,94vw);background:#000}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+dialog video{width:100%;display:block}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#111;color:#fff;font-size:14px}
+.dh button{background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
+@media (max-width:520px){header,main,.key{padding-left:16px;padding-right:16px}main{grid-template-columns:1fr}}
+</style></head><body>
+<header>
+  <h1>Payments Video Library</h1>
+  <p class="sub">7 videos, 3 in style 4 (the house style). Click a picture to play.</p>
+  <div class="bar" role="toolbar">
+    <button class="chip on" data-f="all">All</button>
+    <button class="chip" data-f="4">Style 4 Mixed</button>
+    <button class="chip" data-f="1">Style 1 Flow</button>
+    <button class="chip" data-f="2">Style 2 Cartoon</button>
+    <button class="chip" data-f="D">Fortnightly demo</button>
+    <input type="search" placeholder="Search a title or ticket, for example PAYMT-498" aria-label="Search">
+  </div>
+</header>
+<main>
+<article class="card" data-style="4" data-search="orchestrator readiness programme, short v4, mixed style, the card, paymt-515 paymt-515 4 mixed">
+  <button class="thumb" data-play="2026-11-10%20Orchestrator%20readiness%20programme%2C%20short%20%28v4%2C%20mixed%20style%2C%20the%20card%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme, short" aria-label="Play Orchestrator readiness programme, short">
+    <img src="_thumbs/2026-11-10 Orchestrator readiness programme, short (v4, mixed style, the card, PAYMT-515).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">2 min 05 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s4">Style 4 Mixed</span><span class="tag t">PAYMT-515</span><span class="date">2026-11-10</span></div>
+    <h2>Orchestrator readiness programme, short</h2>
+    <p class="about">What the orchestrator readiness programme has already won, by region, and what owning our own tokens unlocks.</p>
+    <p class="ver">v4, mixed style, the card, PAYMT-515</p>
+    <div class="actions"><a class="btn" href="2026-11-10%20Orchestrator%20readiness%20programme%2C%20short%20%28v4%2C%20mixed%20style%2C%20the%20card%2C%20PAYMT-515%29.mp4" data-play="2026-11-10%20Orchestrator%20readiness%20programme%2C%20short%20%28v4%2C%20mixed%20style%2C%20the%20card%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme, short">Play</a><a class="btn ghost" href="2026-11-10%20Orchestrator%20readiness%20programme%2C%20short%20%28v4%2C%20mixed%20style%2C%20the%20card%2C%20PAYMT-515%29.mp4" download>Download (39.1 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card" data-style="4" data-search="the network transaction id model, short v8, mixed style, the receipt, paymt-197 paymt-197 4 mixed">
+  <button class="thumb" data-play="2026-11-10%20The%20Network%20Transaction%20ID%20model%2C%20short%20%28v8%2C%20mixed%20style%2C%20the%20receipt%2C%20PAYMT-197%29.mp4" data-title="The Network Transaction ID model, short" aria-label="Play The Network Transaction ID model, short">
+    <img src="_thumbs/2026-11-10 The Network Transaction ID model, short (v8, mixed style, the receipt, PAYMT-197).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">1 min 41 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s4">Style 4 Mixed</span><span class="tag t">PAYMT-197</span><span class="date">2026-11-10</span></div>
+    <h2>The Network Transaction ID model, short</h2>
+    <p class="about">Why the bank&#x27;s receipt (the Network Transaction ID) belongs to the subscription, and what keeping it is worth.</p>
+    <p class="ver">v8, mixed style, the receipt, PAYMT-197</p>
+    <div class="actions"><a class="btn" href="2026-11-10%20The%20Network%20Transaction%20ID%20model%2C%20short%20%28v8%2C%20mixed%20style%2C%20the%20receipt%2C%20PAYMT-197%29.mp4" data-play="2026-11-10%20The%20Network%20Transaction%20ID%20model%2C%20short%20%28v8%2C%20mixed%20style%2C%20the%20receipt%2C%20PAYMT-197%29.mp4" data-title="The Network Transaction ID model, short">Play</a><a class="btn ghost" href="2026-11-10%20The%20Network%20Transaction%20ID%20model%2C%20short%20%28v8%2C%20mixed%20style%2C%20the%20receipt%2C%20PAYMT-197%29.mp4" download>Download (31.7 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card" data-style="4" data-search="recaptcha v3 explained, short v3, mixed style, the door, paymt-498 paymt-498 4 mixed">
+  <button class="thumb" data-play="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short" aria-label="Play reCAPTCHA v3 explained, short">
+    <img src="_thumbs/2026-11-10 reCAPTCHA v3 explained, short (v3, mixed style, the door, PAYMT-498).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">2 min 25 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s4">Style 4 Mixed</span><span class="tag t">PAYMT-498</span><span class="date">2026-11-10</span></div>
+    <h2>reCAPTCHA v3 explained, short</h2>
+    <p class="about">How the reCAPTCHA check scores every visit, what it caught in the card-testing attack, and what blocking adds.</p>
+    <p class="ver">v3, mixed style, the door, PAYMT-498</p>
+    <div class="actions"><a class="btn" href="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" data-play="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short">Play</a><a class="btn ghost" href="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" download>Download (43.3 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card" data-style="1" data-search="the network transaction id model v7, one id per subscription, paymt-197 paymt-197 1 flow">
+  <button class="thumb" data-play="2026-11-09%20The%20Network%20Transaction%20ID%20model%20%28v7%2C%20one%20id%20per%20subscription%2C%20PAYMT-197%29.mp4" data-title="The Network Transaction ID model" aria-label="Play The Network Transaction ID model">
+    <img src="_thumbs/2026-11-09 The Network Transaction ID model (v7, one id per subscription, PAYMT-197).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">4 min 11 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s1">Style 1 Flow</span><span class="tag t">PAYMT-197</span><span class="date">2026-11-09</span></div>
+    <h2>The Network Transaction ID model</h2>
+    <p class="about">The longer flow version: where the id comes from, where we lose it, one record per subscription.</p>
+    <p class="ver">v7, one id per subscription, PAYMT-197</p>
+    <div class="actions"><a class="btn" href="2026-11-09%20The%20Network%20Transaction%20ID%20model%20%28v7%2C%20one%20id%20per%20subscription%2C%20PAYMT-197%29.mp4" data-play="2026-11-09%20The%20Network%20Transaction%20ID%20model%20%28v7%2C%20one%20id%20per%20subscription%2C%20PAYMT-197%29.mp4" data-title="The Network Transaction ID model">Play</a><a class="btn ghost" href="2026-11-09%20The%20Network%20Transaction%20ID%20model%20%28v7%2C%20one%20id%20per%20subscription%2C%20PAYMT-197%29.mp4" download>Download (9.0 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card" data-style="2" data-search="recaptcha v3 explained v3, style 2 cartoon, paymt-498 paymt-498 2 cartoon">
+  <button class="thumb" data-play="2026-11-09%20reCAPTCHA%20v3%20explained%20%28v3%2C%20style%202%20cartoon%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained" aria-label="Play reCAPTCHA v3 explained">
+    <img src="_thumbs/2026-11-09 reCAPTCHA v3 explained (v3, style 2 cartoon, PAYMT-498).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">3 min 11 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s2">Style 2 Cartoon</span><span class="tag t">PAYMT-498</span><span class="date">2026-11-09</span></div>
+    <h2>reCAPTCHA v3 explained</h2>
+    <p class="about">The longer cartoon version: the robot, the door and the gauge, monitoring against blocking.</p>
+    <p class="ver">v3, style 2 cartoon, PAYMT-498</p>
+    <div class="actions"><a class="btn" href="2026-11-09%20reCAPTCHA%20v3%20explained%20%28v3%2C%20style%202%20cartoon%2C%20PAYMT-498%29.mp4" data-play="2026-11-09%20reCAPTCHA%20v3%20explained%20%28v3%2C%20style%202%20cartoon%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained">Play</a><a class="btn ghost" href="2026-11-09%20reCAPTCHA%20v3%20explained%20%28v3%2C%20style%202%20cartoon%2C%20PAYMT-498%29.mp4" download>Download (7.5 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card" data-style="1" data-search="orchestrator readiness programme since 28 aug v8, regions no dollars, paymt-515 paymt-515 1 flow">
+  <button class="thumb" data-play="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme since 28 Aug" aria-label="Play Orchestrator readiness programme since 28 Aug">
+    <img src="_thumbs/2026-11-08 Orchestrator readiness programme since 28 Aug (v8, regions no dollars, PAYMT-515).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">4 min 05 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s1">Style 1 Flow</span><span class="tag t">PAYMT-515</span><span class="date">2026-11-08</span></div>
+    <h2>Orchestrator readiness programme since 28 Aug</h2>
+    <p class="about">The longer flow version of the programme since 28 August, gains by region, no dollar values.</p>
+    <p class="ver">v8, regions no dollars, PAYMT-515</p>
+    <div class="actions"><a class="btn" href="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" data-play="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme since 28 Aug">Play</a><a class="btn ghost" href="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" download>Download (11.6 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card" data-style="D" data-search="two weeks in payments 23 oct to 7 nov 2026 episode 1 v9, paymt-511 paymt-511 demo">
+  <button class="thumb" data-play="2026-11-07%20Two%20weeks%20in%20Payments%2023%20Oct%20to%207%20Nov%202026%20%28episode%201%20v9%2C%20PAYMT-511%29.mp4" data-title="Two weeks in Payments 23 Oct to 7 Nov 2026" aria-label="Play Two weeks in Payments 23 Oct to 7 Nov 2026">
+    <img src="_thumbs/2026-11-07 Two weeks in Payments 23 Oct to 7 Nov 2026 (episode 1 v9, PAYMT-511).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">4 min 24 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag sD">Style Demo</span><span class="tag t">PAYMT-511</span><span class="date">2026-11-07</span></div>
+    <h2>Two weeks in Payments 23 Oct to 7 Nov 2026</h2>
+    <p class="about">The fortnightly demo: what landed in Payments in those two weeks.</p>
+    <p class="ver">episode 1 v9, PAYMT-511</p>
+    <div class="actions"><a class="btn" href="2026-11-07%20Two%20weeks%20in%20Payments%2023%20Oct%20to%207%20Nov%202026%20%28episode%201%20v9%2C%20PAYMT-511%29.mp4" data-play="2026-11-07%20Two%20weeks%20in%20Payments%2023%20Oct%20to%207%20Nov%202026%20%28episode%201%20v9%2C%20PAYMT-511%29.mp4" data-title="Two weeks in Payments 23 Oct to 7 Nov 2026">Play</a><a class="btn ghost" href="2026-11-07%20Two%20weeks%20in%20Payments%2023%20Oct%20to%207%20Nov%202026%20%28episode%201%20v9%2C%20PAYMT-511%29.mp4" download>Download (13.5 MB)</a></div>
+    
+  </div>
+</article></main>
+<p class="key">The longer videos (styles 1 and 2, and the demo) are separate films, not older versions of the shorts, so they stay here as finals.
+Links: add #style=4 to this page's address to open it showing only style 4 (also #style=1, #style=2, #style=demo; add &amp;q=PAYMT-498 to search); clicking a filter puts it in the address too.
+Key: PAYMT is the prefix of a ticket in the Payments Space in ClickUp.</p>
+<dialog id="d"><div class="dh"><span id="dt"></span><button aria-label="Close">&times;</button></div><video id="v" controls></video></dialog>
+<script>
+const chips=[...document.querySelectorAll('.chip')],q=document.querySelector('input[type=search]'),cards=[...document.querySelectorAll('.card')];
+let f='all';
+function apply(){const s=q.value.trim().toLowerCase();cards.forEach(c=>{c.style.display=((f==='all'||c.dataset.style===f)&&(!s||c.dataset.search.includes(s)))?'':'none'})}
+// The address carries the filter: Video-Library.html#style=4 (or 1, 2, demo, all) and #q=PAYMT-498, so a link opens filtered.
+function setStyle(v){const c=chips.find(x=>x.dataset.f===v)||chips[0];chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');f=c.dataset.f}
+function toHash(){const p=new URLSearchParams();if(f!=='all')p.set('style',f==='D'?'demo':f);if(q.value.trim())p.set('q',q.value.trim());
+  history.replaceState(null,'',p.toString()?'#'+p.toString():location.pathname+location.search)}
+function fromHash(){const p=new URLSearchParams((location.hash||'').slice(1)||location.search.slice(1));
+  let s=(p.get('style')||'all').toLowerCase();if(s==='demo')s='D';setStyle(s);q.value=p.get('q')||'';apply()}
+chips.forEach(c=>c.onclick=()=>{setStyle(c.dataset.f);apply();toHash()});
+q.oninput=()=>{apply();toHash()};
+window.addEventListener('hashchange',fromHash);fromHash();
+const d=document.getElementById('d'),v=document.getElementById('v'),dt=document.getElementById('dt');
+document.addEventListener('click',e=>{const a=e.target.closest('[data-play]');if(!a)return;e.preventDefault();v.src=a.dataset.play;dt.textContent=a.dataset.title;d.showModal();v.play().catch(()=>{})});
+d.querySelector('button').onclick=()=>d.close();d.addEventListener('close',()=>{v.pause();v.removeAttribute('src');v.load()});
+d.addEventListener('click',e=>{if(e.target===d)d.close()});
+</script>
+</body></html>
