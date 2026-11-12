@@ -37,6 +37,12 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
 dialog video{width:100%;display:block}
 .dh{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#111;color:#fff;font-size:14px}
 .dh button{background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
+#ch{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 12px;background:#111}
+#ch:empty{display:none}
+#ch button{background:#23232b;border:1px solid #3a3a46;color:#fff;border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer}
+#ch button.on{background:#4338ca;border-color:#4338ca}
+#ch .gl{color:#a1a1aa;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 2px 0 8px}
+.ver.jump{color:var(--accent)}
 @media (max-width:520px){header,main,.key{padding-left:16px;padding-right:16px}main{grid-template-columns:1fr}}
 </style></head><body>
 <header>
@@ -60,7 +66,7 @@ dialog video{width:100%;display:block}
     <div class="tags"><span class="tag s4">Style 4 Mixed</span><span class="tag t">PAYMT-523</span><span class="date">2026-11-12</span></div>
     <h2>The payments portal for the orchestrator</h2>
     <p class="about">The real payments portal, tab by tab: what is available today on each of its nine pages, from connecting processor accounts to routing, webhooks, keys and team.</p>
-    <p class="ver">v6 draft, mixed style, the real site in three chapters, Kaycee, PAYMT-523</p>
+    <p class="ver">v6 draft, mixed style, the real site in three chapters, Kaycee, PAYMT-523</p><p class="ver jump">12 chapters: jump to any part while it plays; captions on the CC button.</p>
     <div class="actions"><a class="btn" href="2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%20draft%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4" data-play="2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%20draft%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4" data-title="The payments portal for the orchestrator">Play</a><a class="btn ghost" href="2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%20draft%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4" download>Download (39.9 MB)</a></div>
     
   </div>
@@ -172,7 +178,7 @@ dialog video{width:100%;display:block}
 <p class="key">The longer videos (styles 1 and 2, and the demo) are separate films, not older versions of the shorts, so they stay here as finals.
 Links: add #style=4 to this page's address to open it showing only style 4 (also #style=1, #style=2, #style=demo; add &amp;q=PAYMT-498 to search); clicking a filter puts it in the address too.
 Key: PAYMT is the prefix of a ticket in the Payments Space in ClickUp.</p>
-<dialog id="d"><div class="dh"><span id="dt"></span><button aria-label="Close">&times;</button></div><video id="v" controls></video></dialog>
+<dialog id="d"><div class="dh"><span id="dt"></span><button aria-label="Close">&times;</button></div><video id="v" controls></video><div id="ch"></div></dialog>
 <script>
 const chips=[...document.querySelectorAll('.chip')],q=document.querySelector('input[type=search]'),cards=[...document.querySelectorAll('.card')];
 let f='all';
@@ -186,9 +192,16 @@ function fromHash(){const p=new URLSearchParams((location.hash||'').slice(1)||lo
 chips.forEach(c=>c.onclick=()=>{setStyle(c.dataset.f);apply();toHash()});
 q.oninput=()=>{apply();toHash()};
 window.addEventListener('hashchange',fromHash);fromHash();
-const d=document.getElementById('d'),v=document.getElementById('v'),dt=document.getElementById('dt');
-document.addEventListener('click',e=>{const a=e.target.closest('[data-play]');if(!a)return;e.preventDefault();v.src=a.dataset.play;dt.textContent=a.dataset.title;d.showModal();v.play().catch(()=>{})});
-d.querySelector('button').onclick=()=>d.close();d.addEventListener('close',()=>{v.pause();v.removeAttribute('src');v.load()});
+const d=document.getElementById('d'),v=document.getElementById('v'),dt=document.getElementById('dt'),ch=document.getElementById('ch');
+// Chapters and captions, for a video that has them: buttons under the player jump to a part; captions sit on the CC button.
+const META={"2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%20draft%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4": {"ch": [[0.0, "Start"], [15.2, "Processors", "Connect"], [35.8, "Checkout"], [51.4, "Settings"], [65.7, "Team"], [81.7, "Routing", "Route"], [100.5, "Test and publish"], [119.3, "Payments", "See"], [130.3, "Orders"], [139.2, "Webhooks"], [155.2, "Dashboard"], [171.8, "Close"]], "vtt": "2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%20draft%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.vtt"}};
+function setup(src){ch.innerHTML='';[...v.querySelectorAll('track')].forEach(t=>t.remove());const m=META[src];if(!m)return;
+  if(m.vtt){const t=document.createElement('track');t.kind='captions';t.srclang='en';t.label='English';t.src=m.vtt;v.appendChild(t)}
+  (m.ch||[]).forEach(c=>{if(c[2]){const g=document.createElement('span');g.className='gl';g.textContent=c[2];ch.appendChild(g)}
+    const b=document.createElement('button');b.textContent=c[1];b.dataset.t=c[0];b.onclick=()=>{v.currentTime=c[0];v.play().catch(()=>{})};ch.appendChild(b)})}
+v.addEventListener('timeupdate',()=>{const bs=[...ch.querySelectorAll('button')];let cur=null;bs.forEach(b=>{if(+b.dataset.t<=v.currentTime+.05)cur=b});bs.forEach(b=>b.classList.toggle('on',b===cur))});
+document.addEventListener('click',e=>{const a=e.target.closest('[data-play]');if(!a)return;e.preventDefault();v.src=a.dataset.play;setup(a.dataset.play);dt.textContent=a.dataset.title;d.showModal();v.play().catch(()=>{})});
+d.querySelector('button').onclick=()=>d.close();d.addEventListener('close',()=>{v.pause();v.removeAttribute('src');v.load();ch.innerHTML=''});
 d.addEventListener('click',e=>{if(e.target===d)d.close()});
 </script>
 </body></html>
