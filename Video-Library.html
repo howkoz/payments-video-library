@@ -2,8 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Payments Video Library</title>
 <style>
-:root{--bg:#f7f7f8;--card:#ffffff;--ink:#18181b;--mute:#52525b;--line:#e4e4e7;--accent:#4338ca;--s4:#4338ca;--s3:#0f766e;--s2:#b4532a;--s1:#1e6f6a;--sD:#6b21a8;--chip:#f4f4f5}
-@media (prefers-color-scheme:dark){:root{--bg:#0b0b0f;--card:#17171c;--ink:#f4f4f5;--mute:#a1a1aa;--line:#2a2a33;--chip:#23232b;--accent:#a5b4fc;--s4:#818cf8;--s3:#2dd4bf;--s2:#fb923c;--s1:#5eead4;--sD:#c084fc}}
+:root{--bg:#f7f7f8;--card:#ffffff;--ink:#18181b;--mute:#52525b;--line:#e4e4e7;--accent:#4338ca;--s5:#7c3aed;--s4:#4338ca;--s3:#0f766e;--s2:#b4532a;--s1:#1e6f6a;--sD:#6b21a8;--chip:#f4f4f5}
+@media (prefers-color-scheme:dark){:root{--bg:#0b0b0f;--card:#17171c;--ink:#f4f4f5;--mute:#a1a1aa;--line:#2a2a33;--chip:#23232b;--accent:#a5b4fc;--s5:#c4b5fd;--s4:#818cf8;--s3:#2dd4bf;--s2:#fb923c;--s1:#5eead4;--sD:#c084fc}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif}
 header{padding:28px 24px 8px;max-width:1240px;margin:0 auto}
 h1{margin:0 0 4px;font-size:28px}.sub{color:var(--mute);margin:0 0 16px}
@@ -21,7 +21,7 @@ main{max-width:1240px;margin:0 auto;padding:8px 24px 40px;display:grid;grid-temp
 .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .tags{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .tag{font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;color:#fff}
-.tag.s4{background:var(--s4)}.tag.s3{background:var(--s3)}.tag.s2{background:var(--s2)}.tag.s1{background:var(--s1)}.tag.sD{background:var(--sD)}
+.tag.s5{background:var(--s5)}.tag.s4{background:var(--s4)}.tag.s3{background:var(--s3)}.tag.s2{background:var(--s2)}.tag.s1{background:var(--s1)}.tag.sD{background:var(--sD)}
 .tag.t{background:var(--chip);color:var(--mute)}.date{color:var(--mute);font-size:13px;margin-left:auto}
 h2{font-size:18px;margin:4px 0 0}.about{margin:0;color:var(--ink)}.ver{margin:0;color:var(--mute);font-size:13px}
 .actions{display:flex;gap:8px;margin-top:6px}
@@ -47,9 +47,10 @@ dialog video{width:100%;display:block}
 </style></head><body>
 <header>
   <h1>Payments Video Library</h1>
-  <p class="sub">9 videos, 5 in style 4 (the house style). Click a picture to play.</p>
+  <p class="sub">9 videos, 4 in style 4 (the house style). Click a picture to play.</p>
   <div class="bar" role="toolbar">
     <button class="chip on" data-f="all">All</button>
+    <button class="chip" data-f="5">Style 5 Glass and Light</button>
     <button class="chip" data-f="4">Style 4 Mixed</button>
     <button class="chip" data-f="1">Style 1 Flow</button>
     <button class="chip" data-f="2">Style 2 Cartoon</button>
@@ -58,6 +59,19 @@ dialog video{width:100%;display:block}
   </div>
 </header>
 <main>
+<article class="card" data-style="5" data-search="recaptcha v3 explained, short v4, glass and light, the score ring, kaycee, paymt-498 paymt-498 5 glass and light">
+  <button class="thumb" data-play="2026-11-12%20reCAPTCHA%20v3%20explained%2C%20short%20%28v4%2C%20glass%20and%20light%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short" aria-label="Play reCAPTCHA v3 explained, short">
+    <img src="_thumbs/2026-11-12 reCAPTCHA v3 explained, short (v4, glass and light, the score ring, Kaycee, PAYMT-498).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">2 min 00 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag s5">Style 5 Glass and Light</span><span class="tag t">PAYMT-498</span><span class="date">2026-11-12</span></div>
+    <h2>reCAPTCHA v3 explained, short</h2>
+    <p class="about">How the reCAPTCHA check scores every visit, where it blocks, what the first week of blocking showed, and why it never met the card-testing attack.</p>
+    <p class="ver">v4, glass and light, the score ring, Kaycee, PAYMT-498</p><p class="ver jump">8 chapters: jump to any part while it plays.</p>
+    <div class="actions"><a class="btn" href="2026-11-12%20reCAPTCHA%20v3%20explained%2C%20short%20%28v4%2C%20glass%20and%20light%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" data-play="2026-11-12%20reCAPTCHA%20v3%20explained%2C%20short%20%28v4%2C%20glass%20and%20light%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short">Play</a><a class="btn ghost" href="2026-11-12%20reCAPTCHA%20v3%20explained%2C%20short%20%28v4%2C%20glass%20and%20light%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" download>Download (33.7 MB)</a></div>
+    
+  </div>
+</article>
 <article class="card" data-style="4" data-search="the payments portal for the orchestrator v6, mixed style, the real site in three chapters, kaycee, paymt-523 paymt-523 4 mixed">
   <button class="thumb" data-play="2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4" data-title="The payments portal for the orchestrator" aria-label="Play The payments portal for the orchestrator">
     <img src="_thumbs/2026-11-12 The payments portal for the orchestrator (v6, mixed style, the real site in three chapters, Kaycee, PAYMT-523).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">3 min 05 s</span>
@@ -110,16 +124,16 @@ dialog video{width:100%;display:block}
     
   </div>
 </article>
-<article class="card" data-style="4" data-search="recaptcha v3 explained, short v3, mixed style, the door, paymt-498 paymt-498 4 mixed">
-  <button class="thumb" data-play="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short" aria-label="Play reCAPTCHA v3 explained, short">
-    <img src="_thumbs/2026-11-10 reCAPTCHA v3 explained, short (v3, mixed style, the door, PAYMT-498).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">2 min 25 s</span>
+<article class="card" data-style="1" data-search="orchestrator readiness programme since 28 aug v9, per subscription, kaycee, paymt-515 paymt-515 1 flow">
+  <button class="thumb" data-play="2026-11-12%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v9%2C%20per%20subscription%2C%20Kaycee%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme since 28 Aug" aria-label="Play Orchestrator readiness programme since 28 Aug">
+    <img src="_thumbs/2026-11-12 Orchestrator readiness programme since 28 Aug (v9, per subscription, Kaycee, PAYMT-515).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">3 min 52 s</span>
   </button>
   <div class="body">
-    <div class="tags"><span class="tag s4">Style 4 Mixed</span><span class="tag t">PAYMT-498</span><span class="date">2026-11-10</span></div>
-    <h2>reCAPTCHA v3 explained, short</h2>
-    <p class="about">How the reCAPTCHA check scores every visit, what it caught in the card-testing attack, and what blocking adds.</p>
-    <p class="ver">v3, mixed style, the door, PAYMT-498</p>
-    <div class="actions"><a class="btn" href="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" data-play="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short">Play</a><a class="btn ghost" href="2026-11-10%20reCAPTCHA%20v3%20explained%2C%20short%20%28v3%2C%20mixed%20style%2C%20the%20door%2C%20PAYMT-498%29.mp4" download>Download (43.3 MB)</a></div>
+    <div class="tags"><span class="tag s1">Style 1 Flow</span><span class="tag t">PAYMT-515</span><span class="date">2026-11-12</span></div>
+    <h2>Orchestrator readiness programme since 28 Aug</h2>
+    <p class="about">The longer flow version of the programme since 28 August, gains by region, no dollar values.</p>
+    <p class="ver">v9, per subscription, Kaycee, PAYMT-515</p>
+    <div class="actions"><a class="btn" href="2026-11-12%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v9%2C%20per%20subscription%2C%20Kaycee%2C%20PAYMT-515%29.mp4" data-play="2026-11-12%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v9%2C%20per%20subscription%2C%20Kaycee%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme since 28 Aug">Play</a><a class="btn ghost" href="2026-11-12%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v9%2C%20per%20subscription%2C%20Kaycee%2C%20PAYMT-515%29.mp4" download>Download (11.1 MB)</a></div>
     
   </div>
 </article>
@@ -149,19 +163,6 @@ dialog video{width:100%;display:block}
     
   </div>
 </article>
-<article class="card" data-style="1" data-search="orchestrator readiness programme since 28 aug v8, regions no dollars, paymt-515 paymt-515 1 flow">
-  <button class="thumb" data-play="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme since 28 Aug" aria-label="Play Orchestrator readiness programme since 28 Aug">
-    <img src="_thumbs/2026-11-08 Orchestrator readiness programme since 28 Aug (v8, regions no dollars, PAYMT-515).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">4 min 05 s</span>
-  </button>
-  <div class="body">
-    <div class="tags"><span class="tag s1">Style 1 Flow</span><span class="tag t">PAYMT-515</span><span class="date">2026-11-08</span></div>
-    <h2>Orchestrator readiness programme since 28 Aug</h2>
-    <p class="about">The longer flow version of the programme since 28 August, gains by region, no dollar values.</p>
-    <p class="ver">v8, regions no dollars, PAYMT-515</p>
-    <div class="actions"><a class="btn" href="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" data-play="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" data-title="Orchestrator readiness programme since 28 Aug">Play</a><a class="btn ghost" href="2026-11-08%20Orchestrator%20readiness%20programme%20since%2028%20Aug%20%28v8%2C%20regions%20no%20dollars%2C%20PAYMT-515%29.mp4" download>Download (11.6 MB)</a></div>
-    
-  </div>
-</article>
 <article class="card" data-style="D" data-search="two weeks in payments 23 oct to 7 nov 2026 episode 1 v9, paymt-511 paymt-511 demo">
   <button class="thumb" data-play="2026-11-07%20Two%20weeks%20in%20Payments%2023%20Oct%20to%207%20Nov%202026%20%28episode%201%20v9%2C%20PAYMT-511%29.mp4" data-title="Two weeks in Payments 23 Oct to 7 Nov 2026" aria-label="Play Two weeks in Payments 23 Oct to 7 Nov 2026">
     <img src="_thumbs/2026-11-07 Two weeks in Payments 23 Oct to 7 Nov 2026 (episode 1 v9, PAYMT-511).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">4 min 24 s</span>
@@ -176,7 +177,7 @@ dialog video{width:100%;display:block}
   </div>
 </article></main>
 <p class="key">The longer videos (styles 1 and 2, and the demo) are separate films, not older versions of the shorts, so they stay here as finals.
-Links: add #style=4 to this page's address to open it showing only style 4 (also #style=1, #style=2, #style=demo; add &amp;q=PAYMT-498 to search); clicking a filter puts it in the address too.
+Links: add #style=4 to this page's address to open it showing only style 4 (also #style=5, #style=1, #style=2, #style=demo; add &amp;q=PAYMT-498 to search); clicking a filter puts it in the address too.
 Key: PAYMT is the prefix of a ticket in the Payments Space in ClickUp.</p>
 <dialog id="d"><div class="dh"><span id="dt"></span><button aria-label="Close">&times;</button></div><video id="v" controls></video><div id="ch"></div></dialog>
 <script>
@@ -194,7 +195,7 @@ q.oninput=()=>{apply();toHash()};
 window.addEventListener('hashchange',fromHash);fromHash();
 const d=document.getElementById('d'),v=document.getElementById('v'),dt=document.getElementById('dt'),ch=document.getElementById('ch');
 // Chapters and captions, for a video that has them: buttons under the player jump to a part; captions sit on the CC button.
-const META={"2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4": {"ch": [[0.0, "Start"], [15.2, "Processors", "Connect"], [35.8, "Checkout"], [51.4, "Settings"], [65.7, "Team"], [81.7, "Routing", "Route"], [100.5, "Test and publish"], [119.3, "Payments", "See"], [130.3, "Orders"], [139.2, "Webhooks"], [155.2, "Dashboard"], [171.8, "Close"]], "vtt": "2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.vtt"}};
+const META={"2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.mp4": {"ch": [[0.0, "Start"], [15.2, "Processors", "Connect"], [35.8, "Checkout"], [51.4, "Settings"], [65.7, "Team"], [81.7, "Routing", "Route"], [100.5, "Test and publish"], [119.3, "Payments", "See"], [130.3, "Orders"], [139.2, "Webhooks"], [155.2, "Dashboard"], [171.8, "Close"]], "vtt": "2026-11-12%20The%20payments%20portal%20for%20the%20orchestrator%20%28v6%2C%20mixed%20style%2C%20the%20real%20site%20in%20three%20chapters%2C%20Kaycee%2C%20PAYMT-523%29.vtt"}, "2026-11-12%20reCAPTCHA%20v3%20explained%2C%20short%20%28v4%2C%20glass%20and%20light%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4": {"ch": [[0.0, "The attack"], [19.4, "The quiet check"], [34.9, "The token"], [52.3, "Where it blocks"], [66.8, "The first week"], [83.4, "The honest answer"], [98.2, "Two limits"], [110.1, "The close"]], "vtt": ""}};
 function setup(src){ch.innerHTML='';[...v.querySelectorAll('track')].forEach(t=>t.remove());const m=META[src];if(!m)return;
   if(m.vtt){const t=document.createElement('track');t.kind='captions';t.srclang='en';t.label='English';t.src=m.vtt;v.appendChild(t)}
   (m.ch||[]).forEach(c=>{if(c[2]){const g=document.createElement('span');g.className='gl';g.textContent=c[2];ch.appendChild(g)}
