@@ -1,0 +1,200 @@
+WEBVTT
+
+00:00:02.199 --> 00:00:03.564
+This is the payments portal for the
+
+00:00:03.607 --> 00:00:05.996
+orchestrator, Unicity's in-house payment service.
+
+00:00:06.764 --> 00:00:07.873
+The Payments team runs it here,
+
+00:00:08.172 --> 00:00:08.872
+without a developer.
+
+00:00:09.452 --> 00:00:11.201
+Nine pages, and three jobs:
+
+00:00:11.585 --> 00:00:13.207
+connect, route, and see.
+
+00:00:15.086 --> 00:00:15.786
+Job one:
+
+00:00:16.025 --> 00:00:16.725
+connect.
+
+00:00:16.835 --> 00:00:18.798
+Processors is where Payments connects our
+
+00:00:18.841 --> 00:00:19.541
+merchant accounts.
+
+00:00:19.822 --> 00:00:20.846
+Six are connected today,
+
+00:00:21.358 --> 00:00:24.217
+across Worldpay, Nuvei, Braintree for
+
+00:00:24.259 --> 00:00:25.923
+PayPal, and Network Merchants,
+
+00:00:26.222 --> 00:00:28.142
+each one tested and switched on here.
+
+00:00:29.432 --> 00:00:31.565
+Checkout previews the payment form exactly
+
+00:00:31.779 --> 00:00:32.675
+as a shopper sees it:
+
+00:00:33.144 --> 00:00:34.253
+that market's ways to pay,
+
+00:00:34.637 --> 00:00:35.960
+and its own address layout,
+
+00:00:36.131 --> 00:00:37.624
+at desktop or mobile size.
+
+00:00:39.134 --> 00:00:41.139
+Settings holds the keys our servers use.
+
+00:00:41.865 --> 00:00:44.041
+Rotate one, and the old key keeps working
+
+00:00:44.169 --> 00:00:46.430
+for twenty-four hours, so checkout never breaks.
+
+00:00:47.997 --> 00:00:49.959
+And Team shows everyone who can sign in.
+
+00:00:50.258 --> 00:00:52.391
+An admin invites a teammate by link,
+
+00:00:52.733 --> 00:00:54.141
+and everyone has their own login,
+
+00:00:54.439 --> 00:00:55.805
+so every change carries a name.
+
+00:00:57.738 --> 00:00:58.438
+Job two:
+
+00:00:58.677 --> 00:00:59.377
+route.
+
+00:00:59.402 --> 00:01:01.706
+Routing decides which processor account
+
+00:01:01.791 --> 00:01:02.858
+charges each payment.
+
+00:01:03.986 --> 00:01:05.308
+Here is rule one for Canada:
+
+00:01:05.735 --> 00:01:07.484
+paid by card, in Canadian dollars.
+
+00:01:08.794 --> 00:01:11.141
+It sends eighty of every hundred payments
+
+00:01:11.269 --> 00:01:13.914
+to the Nuvei account, and twenty to Worldpay.
+
+00:01:15.008 --> 00:01:16.544
+If the first account cannot take a
+
+00:01:16.587 --> 00:01:17.824
+payment, the next one tries.
+
+00:01:18.549 --> 00:01:20.426
+Anything no rule matches goes to the
+
+00:01:20.469 --> 00:01:21.169
+fallback account.
+
+00:01:22.273 --> 00:01:23.553
+And before a rule is published,
+
+00:01:23.895 --> 00:01:25.943
+a dry run shows where a payment would land.
+
+00:01:26.668 --> 00:01:27.905
+Forty-three tried so far,
+
+00:01:28.332 --> 00:01:30.337
+and all forty-three went where the rules said.
+
+00:01:32.228 --> 00:01:32.928
+Job three:
+
+00:01:33.209 --> 00:01:33.909
+see.
+
+00:01:34.191 --> 00:01:35.812
+Payments shows every payment.
+
+00:01:36.153 --> 00:01:38.201
+Open one, and every attempt is there:
+
+00:01:38.585 --> 00:01:39.695
+the processor that took it,
+
+00:01:39.865 --> 00:01:40.565
+and how it ended.
+
+00:01:41.017 --> 00:01:42.767
+This one was paid on its third attempt.
+
+00:01:44.283 --> 00:01:46.629
+Orders shows that same payment under our
+
+00:01:46.672 --> 00:01:47.653
+own order reference.
+
+00:01:49.225 --> 00:01:51.273
+Webhooks are the signed messages that tell
+
+00:01:51.315 --> 00:01:52.169
+our systems what happened.
+
+00:01:52.937 --> 00:01:54.089
+Here is the one for that payment:
+
+00:01:54.515 --> 00:01:56.691
+delivered, with the reply exactly as
+
+00:01:56.734 --> 00:01:58.355
+received, and it can be sent again.
+
+00:01:59.739 --> 00:02:01.232
+And the Dashboard adds it all up:
+
+00:02:01.445 --> 00:02:03.579
+eleven figures, each compared with the
+
+00:02:03.621 --> 00:02:04.321
+period before.
+
+00:02:04.816 --> 00:02:06.779
+One of them counts payments that succeeded
+
+00:02:06.864 --> 00:02:08.784
+after a decline, like the one we just followed.
+
+00:02:10.504 --> 00:02:11.997
+That is the payments portal for the
+
+00:02:12.040 --> 00:02:12.740
+orchestrator today.
+
+00:02:13.448 --> 00:02:14.813
+Payments connects the accounts,
+
+00:02:15.240 --> 00:02:16.691
+sets and tests the routing,
+
+00:02:17.032 --> 00:02:19.693
+and sees every payment, in one place.
+
