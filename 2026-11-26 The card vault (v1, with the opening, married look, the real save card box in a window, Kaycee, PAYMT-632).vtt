@@ -1,0 +1,128 @@
+WEBVTT
+
+00:00:11.991 --> 00:00:12.691
+The card vault.
+
+00:00:14.343 --> 00:00:16.050
+At the checkout there is a small box:
+
+00:00:16.519 --> 00:00:17.970
+save card for faster checkout.
+
+00:00:18.567 --> 00:00:20.359
+Tick it, and your card has to live somewhere.
+
+00:00:21.127 --> 00:00:22.492
+That place is the card vault:
+
+00:00:22.876 --> 00:00:25.266
+one locked store whose only job is to
+
+00:00:25.308 --> 00:00:26.290
+hold full card numbers.
+
+00:00:29.723 --> 00:00:31.813
+For a saved card, the shop and the
+
+00:00:31.856 --> 00:00:33.648
+order system keep only a stand-in:
+
+00:00:34.075 --> 00:00:35.696
+a token, and a masked number.
+
+00:00:36.169 --> 00:00:37.236
+When the card is charged,
+
+00:00:37.620 --> 00:00:39.411
+the payment service hands the token to the
+
+00:00:39.454 --> 00:00:40.990
+vault, gets the card number back,
+
+00:00:41.332 --> 00:00:42.612
+and passes it to the processor.
+
+00:00:43.252 --> 00:00:45.001
+Only the payment service talks to the vault.
+
+00:00:48.471 --> 00:00:49.324
+The vault is ours:
+
+00:00:49.665 --> 00:00:51.500
+we run it ourselves, not a processor.
+
+00:00:52.055 --> 00:00:53.591
+It holds about six hundred and eighty
+
+00:00:53.676 --> 00:00:54.700
+thousand saved cards.
+
+00:00:55.297 --> 00:00:57.004
+Only about one in seven is on an
+
+00:00:57.047 --> 00:00:57.772
+active subscription.
+
+00:00:58.412 --> 00:01:00.161
+And three in ten have already expired.
+
+00:01:03.467 --> 00:01:05.643
+It grows every year, and it has never
+
+00:01:05.771 --> 00:01:06.471
+been pruned:
+
+00:01:06.795 --> 00:01:08.715
+fifty thousand cards saved in twenty
+
+00:01:08.843 --> 00:01:11.317
+twenty-two, nearly two hundred thousand so
+
+00:01:11.360 --> 00:01:12.060
+far this year.
+
+00:01:12.640 --> 00:01:14.859
+Yet the card security standard asks us to
+
+00:01:14.901 --> 00:01:16.309
+keep only what the business needs.
+
+00:01:19.660 --> 00:01:20.854
+So a cleanup has been decided,
+
+00:01:21.281 --> 00:01:21.981
+in two stages.
+
+00:01:22.732 --> 00:01:24.865
+First, the cards of members who have left,
+
+00:01:25.249 --> 00:01:26.102
+and expired cards.
+
+00:01:26.785 --> 00:01:29.558
+Then, valid cards unused for six months.
+
+00:01:30.198 --> 00:01:32.460
+Together, about seven in ten of the vault.
+
+00:01:32.929 --> 00:01:34.806
+Cards on an active subscription stay.
+
+00:01:35.092 --> 00:01:36.329
+And nothing is deleted yet:
+
+00:01:36.585 --> 00:01:38.207
+it waits for written sign-off.
+
+00:01:40.774 --> 00:01:41.474
+The card vault:
+
+00:01:42.012 --> 00:01:43.505
+one locked place for the card number,
+
+00:01:43.974 --> 00:01:45.766
+a token for the shop, and soon,
+
+00:01:46.150 --> 00:01:47.788
+only the cards we need.
+

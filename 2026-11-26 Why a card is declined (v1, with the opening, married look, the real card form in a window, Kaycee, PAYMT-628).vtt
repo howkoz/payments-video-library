@@ -1,0 +1,176 @@
+WEBVTT
+
+00:00:11.949 --> 00:00:13.229
+Why a card is declined.
+
+00:00:15.091 --> 00:00:16.030
+It starts at the checkout:
+
+00:00:16.286 --> 00:00:19.059
+a card number, a date, a security code,
+
+00:00:19.443 --> 00:00:20.143
+and Place order.
+
+00:00:20.808 --> 00:00:22.216
+Most of the time the answer is yes.
+
+00:00:22.771 --> 00:00:23.582
+Sometimes it is no.
+
+00:00:25.063 --> 00:00:26.471
+A decline is the bank's answer.
+
+00:00:27.196 --> 00:00:28.647
+The payment reaches the card's bank,
+
+00:00:28.945 --> 00:00:30.439
+and the bank sends back no,
+
+00:00:30.780 --> 00:00:31.480
+with a short reason.
+
+00:00:32.145 --> 00:00:33.852
+That reason decides what works next.
+
+00:00:37.083 --> 00:00:39.089
+Four reasons come up again and again.
+
+00:00:39.643 --> 00:00:40.411
+Not enough funds:
+
+00:00:40.966 --> 00:00:42.715
+the account cannot cover the charge today.
+
+00:00:43.270 --> 00:00:43.970
+Do not honor:
+
+00:00:44.422 --> 00:00:46.043
+the bank says no and gives no reason.
+
+00:00:46.598 --> 00:00:47.298
+A dead card:
+
+00:00:47.537 --> 00:00:49.201
+lost, stolen or closed.
+
+00:00:49.660 --> 00:00:50.812
+And the bank's own fraud rule,
+
+00:00:51.196 --> 00:00:52.305
+which stopped this one charge.
+
+00:00:55.831 --> 00:00:56.531
+What works next?
+
+00:00:57.026 --> 00:00:59.543
+On a rebill, trying the same card again
+
+00:00:59.671 --> 00:01:00.371
+rarely does:
+
+00:01:00.695 --> 00:01:01.762
+the bank gives the same answer.
+
+00:01:02.231 --> 00:01:03.852
+A different card usually gets a yes.
+
+00:01:05.424 --> 00:01:07.856
+After not enough funds, the same card pays
+
+00:01:07.941 --> 00:01:09.051
+about one time in seven;
+
+00:01:09.477 --> 00:01:11.355
+a different card, three times in four.
+
+00:01:11.952 --> 00:01:14.256
+After a dead card, the same card pays
+
+00:01:14.299 --> 00:01:15.280
+one time in seventy;
+
+00:01:15.451 --> 00:01:17.584
+a different card, four times in five.
+
+00:01:20.970 --> 00:01:21.866
+When the customer is there,
+
+00:01:22.378 --> 00:01:23.616
+most declines get fixed.
+
+00:01:24.128 --> 00:01:26.432
+On the web, about two in three end
+
+00:01:26.560 --> 00:01:28.522
+paid, and nearly half within the hour.
+
+00:01:29.034 --> 00:01:30.400
+A rebill has nobody there:
+
+00:01:30.912 --> 00:01:33.130
+three in four are not recovered within a month.
+
+00:01:36.389 --> 00:01:37.285
+Some reasons mislead.
+
+00:01:37.754 --> 00:01:39.290
+Pick up card sounds like a card to
+
+00:01:39.333 --> 00:01:40.033
+take away;
+
+00:01:40.058 --> 00:01:41.935
+one version of it is a bank fraud
+
+00:01:42.021 --> 00:01:44.324
+rule that clears, and the same card pays
+
+00:01:44.453 --> 00:01:45.989
+again about one time in four.
+
+00:01:46.500 --> 00:01:48.078
+And a reply that reads like a spending
+
+00:01:48.249 --> 00:01:50.510
+limit can mean the bank wants the identity check.
+
+00:01:53.948 --> 00:01:55.996
+So today, in the United States and Canada,
+
+00:01:56.380 --> 00:01:58.897
+every declined rebill is sorted by its reason.
+
+00:01:59.751 --> 00:02:00.451
+Retry:
+
+00:02:00.604 --> 00:02:01.884
+tried again after three days.
+
+00:02:02.439 --> 00:02:03.139
+Update the card:
+
+00:02:03.335 --> 00:02:04.615
+only a new card will work.
+
+00:02:05.169 --> 00:02:05.869
+Stop:
+
+00:02:05.895 --> 00:02:06.620
+never tried again.
+
+00:02:07.004 --> 00:02:08.369
+About half go to the retry.
+
+00:02:10.495 --> 00:02:11.647
+Why a card is declined:
+
+00:02:12.287 --> 00:02:13.140
+the bank gives a reason,
+
+00:02:13.652 --> 00:02:14.932
+the reason picks the next step,
+
+00:02:15.231 --> 00:02:17.764
+and a different card beats the same card.
+

@@ -1,0 +1,131 @@
+WEBVTT
+
+00:00:11.906 --> 00:00:12.606
+Charged twice.
+
+00:00:14.457 --> 00:00:16.249
+A shopper presses Place order twice.
+
+00:00:16.761 --> 00:00:17.828
+Is the card charged twice?
+
+00:00:18.382 --> 00:00:19.082
+Mostly no:
+
+00:00:19.364 --> 00:00:21.070
+the order system refuses an identical
+
+00:00:21.198 --> 00:00:22.222
+order placed within minutes.
+
+00:00:22.862 --> 00:00:24.953
+In sixteen days, it did that more than
+
+00:00:24.996 --> 00:00:25.934
+eight hundred times.
+
+00:00:29.287 --> 00:00:30.695
+So how does a double charge happen?
+
+00:00:31.420 --> 00:00:33.425
+The ways we have found share one cause:
+
+00:00:33.980 --> 00:00:36.241
+a program charges again without first asking:
+
+00:00:36.839 --> 00:00:37.905
+is this already paid?
+
+00:00:41.184 --> 00:00:42.293
+Three ways we have measured.
+
+00:00:42.762 --> 00:00:44.810
+An order paid with two cards is cancelled,
+
+00:00:45.024 --> 00:00:46.602
+and the first card stays charged.
+
+00:00:47.114 --> 00:00:49.290
+A rebill is declined, the customer pays
+
+00:00:49.376 --> 00:00:51.551
+another way, and the retry charges the old
+
+00:00:51.594 --> 00:00:52.294
+order too.
+
+00:00:52.411 --> 00:00:54.544
+And one subscription is billed twice by
+
+00:00:54.587 --> 00:00:55.287
+the order system.
+
+00:00:58.625 --> 00:00:59.393
+Take the retry.
+
+00:00:59.734 --> 00:01:01.569
+It used to charge the old order without looking.
+
+00:01:02.252 --> 00:01:04.086
+Since the tenth of November it looks first:
+
+00:01:04.598 --> 00:01:06.476
+is there a newer paid order for this subscription?
+
+00:01:07.030 --> 00:01:08.481
+If there is, it charges nothing.
+
+00:01:11.830 --> 00:01:13.280
+One guard turned out too blunt.
+
+00:01:13.920 --> 00:01:16.054
+A gateway check refused any charge on the
+
+00:01:16.096 --> 00:01:17.888
+same card for the same amount within
+
+00:01:18.059 --> 00:01:18.759
+twenty minutes.
+
+00:01:19.123 --> 00:01:20.915
+This year it stopped about three hundred
+
+00:01:21.129 --> 00:01:23.049
+double charges, and refused nearly
+
+00:01:23.177 --> 00:01:25.523
+seventeen hundred real orders to do it.
+
+00:01:25.822 --> 00:01:27.912
+At the end of October it was switched off.
+
+00:01:31.344 --> 00:01:33.136
+What finds the rest is a daily watch.
+
+00:01:33.776 --> 00:01:35.440
+Every morning it looks for cards left
+
+00:01:35.526 --> 00:01:36.891
+charged on cancelled orders,
+
+00:01:37.190 --> 00:01:39.366
+and for orders charged again after a retry.
+
+00:01:40.006 --> 00:01:41.883
+And when it finds one, a person keeps
+
+00:01:41.968 --> 00:01:44.400
+exactly one charge, and sends the other back.
+
+00:01:46.703 --> 00:01:47.403
+Charged twice:
+
+00:01:47.727 --> 00:01:50.073
+it starts when a program does not look first.
+
+00:01:50.628 --> 00:01:52.505
+So look first, watch every morning,
+
+00:01:52.889 --> 00:01:54.825
+and keep exactly one charge.
+

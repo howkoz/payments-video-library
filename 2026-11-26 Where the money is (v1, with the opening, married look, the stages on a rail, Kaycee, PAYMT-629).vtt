@@ -1,0 +1,134 @@
+WEBVTT
+
+00:00:11.906 --> 00:00:12.606
+Where the money is.
+
+00:00:14.554 --> 00:00:16.431
+A card payment is a journey with stages.
+
+00:00:17.199 --> 00:00:18.351
+First the bank says yes:
+
+00:00:18.863 --> 00:00:19.759
+that is the authorization.
+
+00:00:20.442 --> 00:00:21.466
+Then the money is claimed,
+
+00:00:21.807 --> 00:00:23.258
+and a few days later it settles.
+
+00:00:23.770 --> 00:00:24.709
+And sometimes it goes back:
+
+00:00:25.007 --> 00:00:26.714
+a refund, or a chargeback.
+
+00:00:27.045 --> 00:00:27.941
+For most of our payments,
+
+00:00:28.410 --> 00:00:30.202
+the first two happen in one step.
+
+00:00:33.607 --> 00:00:35.228
+Approved has an exact meaning:
+
+00:00:35.911 --> 00:00:37.788
+the bank sent back an authorization code.
+
+00:00:38.471 --> 00:00:39.964
+And not every request is a sale:
+
+00:00:40.391 --> 00:00:42.268
+some are only a check that the card works.
+
+00:00:45.539 --> 00:00:46.392
+Settlement comes later.
+
+00:00:46.904 --> 00:00:49.464
+On Worldpay, a sale reaches its settlement
+
+00:00:49.507 --> 00:00:51.128
+date three days after the payment,
+
+00:00:51.342 --> 00:00:53.688
+and more than nine in ten within five days.
+
+00:00:54.110 --> 00:00:54.920
+One brand is different:
+
+00:00:55.688 --> 00:00:57.182
+American Express pays us directly,
+
+00:00:57.694 --> 00:00:59.571
+so its sales never appear in that file.
+
+00:01:03.013 --> 00:01:04.293
+Money goes back in two ways.
+
+00:01:04.805 --> 00:01:06.213
+A refund, which we send:
+
+00:01:06.810 --> 00:01:08.218
+about one and a half in every hundred
+
+00:01:08.432 --> 00:01:09.132
+approved orders.
+
+00:01:09.456 --> 00:01:11.290
+And a chargeback, which the bank takes:
+
+00:01:11.845 --> 00:01:12.826
+about one in seven hundred.
+
+00:01:13.333 --> 00:01:15.125
+Refunds are made in the processors' own
+
+00:01:15.210 --> 00:01:17.642
+consoles, so our payment record holds none
+
+00:01:17.685 --> 00:01:18.385
+of them.
+
+00:01:21.300 --> 00:01:22.964
+Each stage is written in a different record.
+
+00:01:23.689 --> 00:01:25.353
+The bank's yes is in our payment service.
+
+00:01:26.036 --> 00:01:27.615
+The settlement is in the processor's files.
+
+00:01:28.255 --> 00:01:29.620
+A refund is in the order system.
+
+00:01:30.217 --> 00:01:32.095
+To follow one payment, we read all three.
+
+00:01:35.318 --> 00:01:36.018
+One last thing:
+
+00:01:36.214 --> 00:01:38.688
+an attempt that failed is not lost money.
+
+00:01:39.158 --> 00:01:41.590
+In one fault, sixty cards were declined;
+
+00:01:42.059 --> 00:01:43.680
+forty-five of them were approved again.
+
+00:01:44.192 --> 00:01:46.070
+And across the year, more than a million
+
+00:01:46.283 --> 00:01:48.800
+attempts were really fewer than a million decisions.
+
+00:01:51.103 --> 00:01:51.803
+Where the money is:
+
+00:01:52.127 --> 00:01:55.241
+authorized, settled, sometimes sent back,
+
+00:01:55.540 --> 00:01:58.415
+and never counted as lost until we have looked.
+

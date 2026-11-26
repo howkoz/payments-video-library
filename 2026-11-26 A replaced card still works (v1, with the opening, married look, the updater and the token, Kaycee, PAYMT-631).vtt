@@ -1,0 +1,134 @@
+WEBVTT
+
+00:00:11.949 --> 00:00:13.442
+A replaced card still works.
+
+00:00:15.489 --> 00:00:17.366
+A subscription charges the card you saved,
+
+00:00:17.622 --> 00:00:18.604
+and you are not there.
+
+00:00:19.116 --> 00:00:20.268
+But banks replace cards:
+
+00:00:20.694 --> 00:00:22.230
+they expire, they are lost,
+
+00:00:22.785 --> 00:00:23.485
+the account closes.
+
+00:00:24.321 --> 00:00:25.473
+When the saved card is dead,
+
+00:00:25.857 --> 00:00:27.350
+trying it again almost never works:
+
+00:00:27.905 --> 00:00:29.057
+about one time in seventy.
+
+00:00:32.146 --> 00:00:34.109
+Two tools can keep the subscription billing.
+
+00:00:34.578 --> 00:00:35.278
+The card updater:
+
+00:00:35.730 --> 00:00:37.351
+the card network tells us the new number,
+
+00:00:37.863 --> 00:00:38.563
+or the new date.
+
+00:00:38.845 --> 00:00:39.570
+And the network token:
+
+00:00:39.997 --> 00:00:41.874
+a stand-in number that the network itself
+
+00:00:42.258 --> 00:00:44.221
+keeps current when the bank reissues the card.
+
+00:00:47.441 --> 00:00:49.574
+The updater works today on one of our processors.
+
+00:00:50.427 --> 00:00:53.030
+In one month, Worldpay sent us more than
+
+00:00:53.073 --> 00:00:54.438
+twelve hundred answers:
+
+00:00:54.779 --> 00:00:56.443
+a new number, a new date,
+
+00:00:56.827 --> 00:00:57.595
+or account closed.
+
+00:00:58.101 --> 00:00:59.936
+On our other paths no answer can come
+
+00:00:59.978 --> 00:01:02.112
+back, because the updater only watches
+
+00:01:02.154 --> 00:01:03.520
+cards stored at the processor,
+
+00:01:03.946 --> 00:01:05.696
+and ours are stored in our own vault.
+
+00:01:06.293 --> 00:01:09.152
+About three in four rebills run on those paths.
+
+00:01:12.539 --> 00:01:14.502
+The token already works for us in one place:
+
+00:01:14.886 --> 00:01:15.586
+Apple Pay.
+
+00:01:15.867 --> 00:01:17.531
+Its rebills ride on a network token:
+
+00:01:17.958 --> 00:01:19.793
+more than four thousand in three weeks,
+
+00:01:20.219 --> 00:01:21.798
+and not one needed an updater.
+
+00:01:25.113 --> 00:01:26.563
+What comes next is planned,
+
+00:01:26.819 --> 00:01:27.519
+not built:
+
+00:01:27.758 --> 00:01:30.489
+our own network tokens, stored beside each
+
+00:01:30.617 --> 00:01:32.451
+card in our own vault, so that they
+
+00:01:32.494 --> 00:01:33.603
+work at every processor.
+
+00:01:34.457 --> 00:01:36.078
+The card number stays as the fallback.
+
+00:01:39.347 --> 00:01:41.950
+Until then, the surest fix is a different card:
+
+00:01:42.291 --> 00:01:44.552
+after a dead card, a new one pays
+
+00:01:44.638 --> 00:01:45.619
+four times in five.
+
+00:01:47.933 --> 00:01:48.701
+A replaced card:
+
+00:01:49.170 --> 00:01:51.005
+the updater today on one processor,
+
+00:01:51.474 --> 00:01:52.840
+the token today on Apple Pay,
+
+00:01:53.224 --> 00:01:54.818
+and our own tokens next.
+

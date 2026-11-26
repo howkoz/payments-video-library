@@ -1,0 +1,137 @@
+WEBVTT
+
+00:00:11.906 --> 00:00:13.058
+What alerts when it breaks.
+
+00:00:15.048 --> 00:00:16.840
+When payments break, who finds out,
+
+00:00:17.138 --> 00:00:17.838
+and how?
+
+00:00:17.906 --> 00:00:18.973
+Alarms do exist.
+
+00:00:19.826 --> 00:00:21.490
+The payment service has eight monitors.
+
+00:00:21.881 --> 00:00:23.843
+Payments runs its own, with a verdict
+
+00:00:24.014 --> 00:00:24.714
+every morning.
+
+00:00:25.038 --> 00:00:27.129
+A card-testing watch checks every hour.
+
+00:00:27.683 --> 00:00:29.987
+And a daily watch looks for cards left charged.
+
+00:00:33.416 --> 00:00:35.336
+But an alarm that fires is not an
+
+00:00:35.378 --> 00:00:36.104
+alarm that is read.
+
+00:00:36.786 --> 00:00:38.322
+In September, in one market,
+
+00:00:38.877 --> 00:00:40.882
+the right alarm fired on the first day,
+
+00:00:41.224 --> 00:00:43.144
+naming the right processor and the right
+
+00:00:43.272 --> 00:00:46.130
+fault, and again every hour for seven days.
+
+00:00:46.673 --> 00:00:48.209
+The fault was found on day seven,
+
+00:00:48.721 --> 00:00:50.470
+by a person reading orders by hand.
+
+00:00:53.948 --> 00:00:54.972
+Why did nobody hear it?
+
+00:00:55.569 --> 00:00:57.020
+The alarm was already red for another
+
+00:00:57.105 --> 00:00:58.855
+problem, so its state never changed.
+
+00:00:59.324 --> 00:01:01.628
+A hundred and ninety-five alert messages
+
+00:01:01.841 --> 00:01:03.121
+landed in that channel that day.
+
+00:01:03.463 --> 00:01:05.340
+And the four people in it could not
+
+00:01:05.468 --> 00:01:06.236
+pick out the right one.
+
+00:01:09.544 --> 00:01:10.397
+It was not a one-off.
+
+00:01:10.824 --> 00:01:12.616
+Across sixty-three real faults,
+
+00:01:13.085 --> 00:01:15.048
+the middle time before anyone noticed was
+
+00:01:15.090 --> 00:01:15.790
+seven days.
+
+00:01:16.242 --> 00:01:17.906
+Eleven ran for more than a month.
+
+00:01:18.461 --> 00:01:20.168
+And not one was caught because a system
+
+00:01:20.424 --> 00:01:21.124
+noticed first.
+
+00:01:24.327 --> 00:01:25.223
+There is a second gap.
+
+00:01:25.821 --> 00:01:27.826
+Every alarm watched for bad things happening.
+
+00:01:28.594 --> 00:01:30.215
+Nothing watched for good things not happening:
+
+00:01:30.898 --> 00:01:33.202
+the automatic rebill retry was dead for
+
+00:01:33.245 --> 00:01:35.122
+twenty-two nights, about three thousand
+
+00:01:35.335 --> 00:01:37.895
+attempts, none charged, and no alarm.
+
+00:01:41.073 --> 00:01:43.078
+So our own alarms follow three rules.
+
+00:01:43.718 --> 00:01:45.041
+Speak only when something changes.
+
+00:01:45.596 --> 00:01:46.961
+Put the verdict in the first line.
+
+00:01:47.345 --> 00:01:49.222
+And before anyone says nothing alerted,
+
+00:01:49.606 --> 00:01:50.972
+read the alarm history first.
+
+00:01:53.328 --> 00:01:54.395
+What alerts when it breaks:
+
+00:01:54.992 --> 00:01:56.955
+the alarm has to fire, reach the right
+
+00:01:56.997 --> 00:01:58.549
+people, and be read.
+
