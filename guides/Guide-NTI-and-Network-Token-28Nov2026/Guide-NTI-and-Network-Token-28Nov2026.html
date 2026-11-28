@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NTI and Network Token Guide</title>
+<style>
+:root{--bg:#f4f6f9;--card:#ffffff;--ink:#1f2937;--muted:#5b6b7d;--line:#dbe2ea;--teal:#0f766e;--tealbg:#e6f6f3;--gold:#a16207;--goldbg:#fdf6e3;--red:#b91c1c;--redbg:#fdeeee;--blue:#1e40af;--bluebg:#eaf0fd}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;line-height:1.55;font-size:17px}
+.wrap{max-width:980px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:24px;margin:40px 0 10px;padding-top:6px;border-top:3px solid var(--line)}h3{font-size:19px;margin:22px 0 6px}
+.sub{color:var(--muted);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.tok{border-left:6px solid var(--gold)}.nti{border-left:6px solid var(--teal)}
+.lab{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.tok .lab{color:var(--gold)}.nti .lab{color:var(--teal)}
+ol.steps{padding-left:24px}ol.steps li{margin:6px 0}
+.warn{background:var(--redbg);border:1px solid #f5c2c2;border-radius:12px;padding:12px 16px;margin:12px 0}
+.warn b{color:var(--red)}
+.now{background:var(--bluebg);border:1px solid #c7d6f8;border-radius:12px;padding:12px 16px;margin:12px 0}
+.now b{color:var(--blue)}
+svg{width:100%;height:auto;display:block}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted)}
+.q{font-weight:700;margin-top:14px}
+.key{font-size:14px;color:var(--muted)}
+.src{font-size:13px;color:var(--muted)}
+</style></head><body><div class="wrap">
+
+<h1>The Network Transaction ID and the network token</h1>
+<p class="sub">A guide for Customer Service, Finance and anyone outside Payments. Two numbers travel with a stored card. They do different jobs. Facts as recorded to 25 November 2026.</p>
+
+<div class="card">
+<svg viewBox="0 0 920 300" role="img" aria-label="The network token moves the card. The Network Transaction ID moves the subscription.">
+ <rect x="0" y="0" width="920" height="300" rx="14" fill="#ffffff"/>
+ <rect x="20" y="20" width="430" height="260" rx="14" fill="#fdf6e3" stroke="#d6a84a" stroke-width="2"/>
+ <text x="40" y="54" font-size="20" font-weight="700" fill="#a16207">The network token</text>
+ <rect x="60" y="80" width="200" height="124" rx="14" fill="#1e3a4c"/><rect x="78" y="102" width="40" height="30" rx="5" fill="#d9b45a"/>
+ <text x="78" y="176" font-size="17" font-family="Consolas,monospace" fill="#dce6ee">4895 **** 2207</text>
+ <text x="280" y="120" font-size="15" fill="#1f2937">A stand-in card</text><text x="280" y="140" font-size="15" fill="#1f2937">number from</text><text x="280" y="160" font-size="15" fill="#1f2937">Visa or Mastercard</text>
+ <text x="40" y="240" font-size="18" font-weight="700" fill="#1f2937">Job: it moves the CARD.</text>
+ <text x="40" y="264" font-size="14" fill="#5b6b7d">It keeps working when the bank replaces the card.</text>
+ <rect x="470" y="20" width="430" height="260" rx="14" fill="#e6f6f3" stroke="#3fb3a2" stroke-width="2"/>
+ <text x="490" y="54" font-size="20" font-weight="700" fill="#0f766e">The Network Transaction ID (NTI)</text>
+ <rect x="510" y="80" width="230" height="124" rx="10" fill="#ffffff" stroke="#9fb0c3"/>
+ <text x="526" y="106" font-size="12" font-weight="700" fill="#5b6b7d">RECEIPT, FIRST PAYMENT</text>
+ <text x="526" y="142" font-size="19" font-weight="700" font-family="Consolas,monospace" fill="#1f2937">No. 0123 4567 89</text>
+ <circle cx="700" cy="176" r="22" fill="none" stroke="#12a58f" stroke-width="3"/><text x="700" y="180" font-size="9" font-weight="800" text-anchor="middle" fill="#12a58f">STAMPED</text>
+ <text x="756" y="120" font-size="15" fill="#1f2937">The receipt</text><text x="756" y="140" font-size="15" fill="#1f2937">number of the</text><text x="756" y="160" font-size="15" fill="#1f2937">first payment</text>
+ <text x="490" y="240" font-size="18" font-weight="700" fill="#1f2937">Job: it moves the SUBSCRIPTION.</text>
+ <text x="490" y="264" font-size="14" fill="#5b6b7d">It tells the bank a rebill belongs to a series the customer approved.</text>
+</svg>
+<p style="margin:10px 0 0">The digits in the pictures are made up.</p>
+</div>
+
+<div class="two">
+ <div class="card tok"><div class="lab">Network token</div>
+  <p>A token is a stand-in card number. Visa or Mastercard issues it for one card and one company. The company uses the token in place of the real card number.</p></div>
+ <div class="card nti"><div class="lab">Network Transaction ID</div>
+  <p>The NTI is the receipt number of the first payment of a subscription. Every later rebill quotes it. The bank then knows the customer agreed to the series.</p></div>
+</div>
+
+<h2>Part 1. How the network token works</h2>
+<h3>How a token is made</h3>
+<ol class="steps">
+ <li>A customer saves a card with us.</li>
+ <li>We ask Visa or Mastercard for a token for that card.</li>
+ <li>The network checks the card with the customer's bank.</li>
+ <li>The network sends us the token. We store it beside the card.</li>
+</ol>
+<p>We ask under a Token Requestor ID. This is our company's name tag at Visa and Mastercard. The token belongs to whoever owns that ID.</p>
+
+<h3>What travels on a payment</h3>
+<table>
+ <tr><th>When</th><th>What we send</th></tr>
+ <tr><td>The customer is paying now</td><td>The token and a one-time code from the network (a cryptogram)</td></tr>
+ <tr><td>A rebill, with no customer present</td><td>The token and the NTI of the first payment</td></tr>
+ <tr><td>The token does not work</td><td>The real card number, as a fallback</td></tr>
+</table>
+
+<h3>Why it helps</h3>
+<ul>
+ <li>The bank replaces a lost or expired card. The network keeps the token working, so the subscription keeps paying.</li>
+ <li>The real card number does not travel on the payment.</li>
+ <li>A token that Unicity owns can go to any processor that accepts it.</li>
+</ul>
+
+<div class="warn"><b>Watch out.</b> Some processors offer their own tokens, for example Worldpay's Revenue Boost. Those tokens sit under the processor's Token Requestor ID, not ours. They help approvals at that processor. They cannot move with us to another processor.</div>
+
+<div class="now"><b>Where Unicity stands.</b> Unicity does not have its own Token Requestor ID yet. The plan, set on 15 October 2026, is to ask Visa and Mastercard directly under our own ID. A new vault alone does not give us tokens: we must enrol with the card networks first.</div>
+
+<h2>Part 2. How the Network Transaction ID works</h2>
+<div class="card">
+<svg viewBox="0 0 920 230" role="img" aria-label="First payment gets a receipt number. Each rebill quotes it. The bank links the series.">
+ <rect x="0" y="0" width="920" height="230" rx="14" fill="#ffffff"/>
+ <g font-family="Segoe UI,Arial,sans-serif">
+ <rect x="20" y="40" width="170" height="80" rx="12" fill="#eaf0fd" stroke="#6b8de3"/><text x="105" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#1e40af">1. First payment</text><text x="105" y="96" text-anchor="middle" font-size="13" fill="#1f2937">the customer agrees</text>
+ <path d="M190 80 H240" stroke="#5b6b7d" stroke-width="2" fill="none" marker-end="url(#a)"/>
+ <rect x="245" y="40" width="190" height="80" rx="12" fill="#e6f6f3" stroke="#3fb3a2"/><text x="340" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#0f766e">2. Card network</text><text x="340" y="96" text-anchor="middle" font-size="13" fill="#1f2937">stamps a receipt number</text>
+ <path d="M435 80 H485" stroke="#5b6b7d" stroke-width="2" fill="none" marker-end="url(#a)"/>
+ <rect x="490" y="40" width="190" height="80" rx="12" fill="#f4f6f9" stroke="#9fb0c3"/><text x="585" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2937">3. Processor</text><text x="585" y="96" text-anchor="middle" font-size="13" fill="#1f2937">returns it in its reply</text>
+ <path d="M680 80 H730" stroke="#5b6b7d" stroke-width="2" fill="none" marker-end="url(#a)"/>
+ <rect x="735" y="40" width="165" height="80" rx="12" fill="#fdf6e3" stroke="#d6a84a"/><text x="817" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#a16207">4. We store it</text><text x="817" y="96" text-anchor="middle" font-size="13" fill="#1f2937">with the subscription</text>
+ <rect x="120" y="150" width="680" height="60" rx="12" fill="#e6f6f3" stroke="#3fb3a2"/>
+ <text x="460" y="178" text-anchor="middle" font-size="16" font-weight="700" fill="#0f766e">5. Every rebill quotes it, marked "merchant-initiated"</text>
+ <text x="460" y="198" text-anchor="middle" font-size="13" fill="#1f2937">The bank sees one series that the customer approved, not a stranger.</text>
+ </g>
+ <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#5b6b7d" stroke-width="1.6"/></marker></defs>
+</svg>
+</div>
+
+<h3>Three rules about the NTI</h3>
+<ul>
+ <li>Only the processor can give it to us. It comes back in the reply to the first payment. Nobody requests it.</li>
+ <li>It belongs to the subscription, not to the card. Two subscriptions on one card each keep their own NTI.</li>
+ <li>A new card or a new subscription starts a new series with its own first payment.</li>
+</ul>
+
+<div class="now"><b>Where Unicity stands.</b> Of 96,653 active card subscriptions, 11,255 hold a real NTI: about 12 in 100. In Europe, where rebills carry these fields, approval rose from 56.8% (783 of 1,378) to 67.1% (760 of 1,133), 14 days each side. Card subscriptions in the United States and Canada rebilled with no NTI at the 9 November 2026 count.</div>
+
+<h2>Part 3. How they work together on a rebill</h2>
+<div class="card">
+<svg viewBox="0 0 920 200" role="img" aria-label="A rebill carries the token and the NTI; the bank knows both the card and the series.">
+ <rect x="0" y="0" width="920" height="200" rx="14" fill="#ffffff"/>
+ <rect x="20" y="30" width="420" height="140" rx="14" fill="#f4f6f9" stroke="#9fb0c3"/>
+ <text x="40" y="62" font-size="17" font-weight="700" fill="#1f2937">One rebill carries:</text>
+ <rect x="40" y="80" width="170" height="36" rx="18" fill="#fdf6e3" stroke="#d6a84a"/><text x="125" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#a16207">the token</text>
+ <rect x="230" y="80" width="190" height="36" rx="18" fill="#e6f6f3" stroke="#3fb3a2"/><text x="325" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#0f766e">the first payment's NTI</text>
+ <text x="40" y="148" font-size="14" fill="#5b6b7d">marked merchant-initiated (no customer present)</text>
+ <path d="M440 100 H500" stroke="#5b6b7d" stroke-width="2" fill="none" marker-end="url(#b)"/>
+ <rect x="505" y="30" width="395" height="140" rx="14" fill="#eaf0fd" stroke="#6b8de3"/>
+ <text x="525" y="62" font-size="17" font-weight="700" fill="#1e40af">The bank sees:</text>
+ <text x="525" y="92" font-size="15" fill="#1f2937">a card it knows, even if it was replaced (the token)</text>
+ <text x="525" y="118" font-size="15" fill="#1f2937">a series the customer approved (the NTI)</text>
+ <text x="525" y="150" font-size="15" font-weight="700" fill="#1e40af">So it can approve the rebill.</text>
+ <defs><marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#5b6b7d" stroke-width="1.6"/></marker></defs>
+</svg>
+</div>
+<p>A token without the NTI is a known card with no proof of the agreement. An NTI without a token still works, but it can break when the bank replaces the card.</p>
+
+<h2>Part 4. Quick answers</h2>
+<p class="q">Are the token and the NTI the same thing?</p>
+<p>No. The token stands in for the card. The NTI is the receipt number of the first payment of one subscription.</p>
+<p class="q">A customer got a new card. Does the subscription stop?</p>
+<p>With a network token, the network keeps the token working when the bank replaces the card. Unicity does not have its own tokens yet.</p>
+<p class="q">Why does a rebill decline as a "stranger"?</p>
+<p>The rebill carries no NTI. The bank cannot link it to the payment the customer approved.</p>
+<p class="q">Can we ask a processor for a customer's NTI?</p>
+<p>No. The processor returns it in the reply to the first payment. If we did not keep it then, the next first payment makes a new one.</p>
+<p class="q">A processor says "we give you network tokens". Is that enough?</p>
+<p>Ask whose Token Requestor ID they sit under. If it is the processor's ID, the tokens cannot move with us.</p>
+
+<h2>Words in this guide</h2>
+<table class="key">
+ <tr><td><b>Network token</b></td><td>A stand-in card number from Visa or Mastercard for one card and one company.</td></tr>
+ <tr><td><b>Network Transaction ID (NTI)</b></td><td>The receipt number the card network stamps on the first payment of a subscription.</td></tr>
+ <tr><td><b>Token Requestor ID</b></td><td>A company's registration with Visa or Mastercard to ask for tokens. The tokens belong to that company.</td></tr>
+ <tr><td><b>Cryptogram</b></td><td>A one-time code from the network that goes with a token when the customer is paying.</td></tr>
+ <tr><td><b>Processor</b></td><td>The company that sends our payment to the card network, for example Worldpay or Nuvei.</td></tr>
+ <tr><td><b>Rebill</b></td><td>A later payment of a subscription, with no customer present.</td></tr>
+ <tr><td><b>Merchant-initiated</b></td><td>A payment that we start under an agreement the customer gave, with no customer present.</td></tr>
+</table>
+
+<p class="src"><b>Sources.</b></p>
+<ul class="src">
+ <li>The approved Network Transaction ID films (PAYMT-197, versions 10 to 13) and their source table.</li>
+ <li>BRAIN knowledge page "The network token is not the NTI" (25 Oct 2026).</li>
+ <li>BRAIN knowledge page "The NTI belongs to the agreement, not the card" (9 Nov 2026).</li>
+ <li>The network tokens project page and the Vault 2.0 picture (24 Nov 2026).</li>
+ <li>Written with the training-writing rules: one idea per sentence, short sentences. Built 28 Nov 2026.</li>
+</ul>
+</div><style id="theme-toggle-style">/* theme-toggle-v2 */
+html.dark { filter: invert(0.88) hue-rotate(180deg); background: #ffffff; }
+html.dark body { background: #ffffff; }
+html.dark img, html.dark video, html.dark picture { filter: invert(1) hue-rotate(180deg); }
+#theme-toggle { position: fixed; top: 12px; right: 12px; z-index: 2147483000; padding: 6px 12px;
+  border: 1px solid #94a3b8; border-radius: 8px; background: #ffffff; color: #1e3a8a;
+  font: 600 12px 'Segoe UI', Arial, sans-serif; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+#theme-toggle:hover { background: #eef3ff; }
+@media print { #theme-toggle { display: none; } }
+</style>
+<button id="theme-toggle" type="button" aria-label="Switch between light and dark">Dark</button>
+<script id="theme-toggle-script">
+(function () {
+  var root = document.documentElement, key = 'theme:' + location.pathname;
+  var btn = document.getElementById('theme-toggle');
+  function set(dark) {
+    root.classList.toggle('dark', dark);
+    if (btn) { btn.textContent = dark ? 'Light' : 'Dark'; }
+  }
+  try { set(localStorage.getItem(key) === 'dark'); } catch (e) { set(false); }
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var dark = !root.classList.contains('dark');
+      set(dark);
+      try { localStorage.setItem(key, dark ? 'dark' : 'light'); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>

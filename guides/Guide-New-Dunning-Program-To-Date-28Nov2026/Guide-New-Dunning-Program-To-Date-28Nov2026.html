@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New Dunning Program Guide</title>
+<style>
+:root{--bg:#f4f6f9;--card:#ffffff;--ink:#1f2937;--muted:#5b6b7d;--line:#dbe2ea;--teal:#0f766e;--gold:#a16207;--red:#b91c1c;--redbg:#fdeeee;--blue:#1e40af;--bluebg:#eaf0fd}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;line-height:1.55;font-size:17px}
+.wrap{max-width:980px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:24px;margin:40px 0 10px;padding-top:6px;border-top:3px solid var(--line)}h3{font-size:19px;margin:22px 0 6px}
+.sub{color:var(--muted);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:14px 0}
+.warn{background:var(--redbg);border:1px solid #f5c2c2;border-radius:12px;padding:12px 16px;margin:12px 0}.warn b{color:var(--red)}
+.now{background:var(--bluebg);border:1px solid #c7d6f8;border-radius:12px;padding:12px 16px;margin:12px 0}.now b{color:var(--blue)}
+svg{width:100%;height:auto;display:block}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted)}
+.q{font-weight:700;margin-top:14px}.key{font-size:14px;color:var(--muted)}.src{font-size:13px;color:var(--muted)}
+.tag{display:inline-block;padding:1px 9px;border-radius:999px;font-size:13px;font-weight:700;color:#fff}
+</style></head><body><div class="wrap">
+
+<h1>The new dunning program, to date</h1>
+<p class="sub">How we retry a declined subscription rebill in the United States and Canada, and how it is doing. For Customer Service, Finance and anyone outside Payments. Records to 27 November 2026.</p>
+
+<div class="card">
+<svg viewBox="0 0 920 330" role="img" aria-label="The old model retried once after 12 hours. The new model sorts the wording, retries on day 4 and day 8, and stops after day 14.">
+ <rect x="0" y="0" width="920" height="330" rx="14" fill="#ffffff"/>
+ <text x="20" y="34" font-size="17" font-weight="700" fill="#5b6b7d">Before, to 3 November 2026</text>
+ <line x1="40" y1="70" x2="880" y2="70" stroke="#c9d3de" stroke-width="4"/>
+ <circle cx="40" cy="70" r="14" fill="#b91c1c"/><text x="40" y="104" text-anchor="middle" font-size="13" fill="#1f2937">declined</text>
+ <circle cx="90" cy="70" r="12" fill="#9fb0c3"/><text x="78" y="128" text-anchor="start" font-size="13" fill="#1f2937">one retry after 12 hours, any wording</text>
+ <text x="20" y="172" font-size="17" font-weight="700" fill="#0f766e">Now, since 4 November (day 4) and 23 November (day 8)</text>
+ <line x1="40" y1="220" x2="880" y2="220" stroke="#9fe1cb" stroke-width="4"/>
+ <circle cx="40" cy="220" r="14" fill="#b91c1c"/><text x="40" y="254" text-anchor="middle" font-size="13" fill="#1f2937">declined</text>
+ <rect x="70" y="196" width="150" height="48" rx="10" fill="#fdf6e3" stroke="#d6a84a"/><text x="145" y="216" text-anchor="middle" font-size="13" font-weight="700" fill="#a16207">The wording</text><text x="145" y="234" text-anchor="middle" font-size="13" fill="#a16207">is sorted</text>
+ <circle cx="330" cy="220" r="16" fill="#0f766e"/><text x="330" y="226" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+ <text x="330" y="258" text-anchor="middle" font-size="13" fill="#1f2937">Retry 1, day 4</text><text x="330" y="276" text-anchor="middle" font-size="12" fill="#5b6b7d">72 hours after the decline</text>
+ <circle cx="560" cy="220" r="16" fill="#0f766e"/><text x="560" y="226" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2</text>
+ <text x="560" y="258" text-anchor="middle" font-size="13" fill="#1f2937">Retry 2, day 8</text><text x="560" y="276" text-anchor="middle" font-size="12" fill="#5b6b7d">96 hours after retry 1,</text><text x="560" y="292" text-anchor="middle" font-size="12" fill="#5b6b7d">only if retry 1 is declined</text>
+ <rect x="770" y="200" width="110" height="40" rx="10" fill="#fdeeee" stroke="#e8a0a0"/><text x="825" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#b91c1c">Day 14: stop</text>
+ <text x="825" y="262" text-anchor="middle" font-size="12" fill="#5b6b7d">nothing charged after</text>
+</svg>
+</div>
+
+<h2>Part 1. What changed</h2>
+<table>
+ <tr><th></th><th>Before (to 3 Nov 2026)</th><th>Now</th></tr>
+ <tr><td>Which declines are retried</td><td>Every declined rebill</td><td>Only wording in the RETRY group</td></tr>
+ <tr><td>When</td><td>Once, 12 hours after the decline</td><td>Day 4, then day 8 if the bank says "not now" again</td></tr>
+ <tr><td>Last possible charge</td><td>12 hours after the decline</td><td>Day 14</td></tr>
+ <tr><td>Where</td><td>United States and Canada</td><td>United States and Canada</td></tr>
+</table>
+<p>The settings sit in the production configuration: 2 retries per order, waits of 3 days and 4 days.</p>
+
+<h2>Part 2. How the bank's wording is sorted</h2>
+<p>The bank sends a reason with every decline. The program matches that wording against its rules and puts it in one group.</p>
+<table>
+ <tr><th>Group</th><th>What the bank means</th><th>What we do</th></tr>
+ <tr><td><span class="tag" style="background:#0f766e">RETRY</span></td><td>Not now: not enough funds, limit exceeded, withdrawal limit</td><td>Retry on day 4</td></tr>
+ <tr><td><span class="tag" style="background:#a16207">UPDATE</span></td><td>The card expired or closed. The customer needs a new card.</td><td>No retry</td></tr>
+ <tr><td><span class="tag" style="background:#b91c1c">STOP</span></td><td>Never: lost, stolen, fraud, stop all recurring payments</td><td>No retry</td></tr>
+ <tr><td><span class="tag" style="background:#5b6b7d">FIX</span></td><td>Our own setup was wrong. A retry would fail the same way.</td><td>No retry</td></tr>
+ <tr><td><span class="tag" style="background:#9fb0c3">UNKNOWN</span></td><td>Wording the rules do not know</td><td>No retry</td></tr>
+</table>
+<div class="warn"><b>The cautious rule.</b> When a wording matches two groups, the most cautious one wins. A wording that matches both STOP and RETRY is never retried.</div>
+
+<h3>Day by day</h3>
+<ol>
+ <li>Day 0: the rebill is declined. The program sorts the wording.</li>
+ <li>Only a RETRY wording in the United States or Canada joins the retry list.</li>
+ <li>Day 4: retry 1 runs, 72 hours after the decline.</li>
+ <li>If it pays, the order is finished.</li>
+ <li>If retry 1 is declined with a RETRY wording, or one the rules do not know, the order waits for day 8.</li>
+ <li>STOP, UPDATE, FIX or "Do Not Honor" ends the retries.</li>
+ <li>Day 8: retry 2 runs, 96 hours after retry 1. This is the last attempt.</li>
+ <li>Nothing is charged after day 14.</li>
+</ol>
+
+<h2>Part 3. How it is doing</h2>
+<p>We compared the same days of two months. Each order counts once, by its first retry. The orders were first declined on day 4 to day 23 of each month. October ran the old model. November ran the new one.</p>
+<div class="card">
+<svg viewBox="0 0 920 330" role="img" aria-label="Share of first retries paid, October against November: both markets 8.2 to 11.8, United States 8.4 to 10.6, Canada 6.7 to 18.2.">
+ <rect x="0" y="0" width="920" height="330" rx="14" fill="#ffffff"/>
+ <text x="20" y="32" font-size="16" font-weight="700" fill="#1f2937">First retries paid, in every 100 (October old model, November new model)</text>
+ <line x1="40" y1="270" x2="880" y2="270" stroke="#9fb0c3"/>
+ <g font-size="13">
+ <rect x="80" y="196" width="80" height="74" fill="#9fb0c3"/><text x="120" y="188" text-anchor="middle" font-weight="700" fill="#1f2937">8.2</text>
+ <rect x="170" y="164" width="80" height="106" fill="#0f766e"/><text x="210" y="156" text-anchor="middle" font-weight="700" fill="#0f766e">11.8</text>
+ <text x="165" y="292" text-anchor="middle" font-weight="700" fill="#1f2937">Both markets</text><text x="165" y="310" text-anchor="middle" fill="#5b6b7d">258 of 3,161 to 428 of 3,639</text>
+ <rect x="370" y="194" width="80" height="76" fill="#9fb0c3"/><text x="410" y="186" text-anchor="middle" font-weight="700" fill="#1f2937">8.4</text>
+ <rect x="460" y="175" width="80" height="95" fill="#0f766e"/><text x="500" y="167" text-anchor="middle" font-weight="700" fill="#0f766e">10.6</text>
+ <text x="455" y="292" text-anchor="middle" font-weight="700" fill="#1f2937">United States</text><text x="455" y="310" text-anchor="middle" fill="#5b6b7d">223 of 2,641 to 329 of 3,094</text>
+ <rect x="660" y="210" width="80" height="60" fill="#9fb0c3"/><text x="700" y="202" text-anchor="middle" font-weight="700" fill="#1f2937">6.7</text>
+ <rect x="750" y="106" width="80" height="164" fill="#0f766e"/><text x="790" y="98" text-anchor="middle" font-weight="700" fill="#0f766e">18.2</text>
+ <text x="745" y="292" text-anchor="middle" font-weight="700" fill="#1f2937">Canada</text><text x="745" y="310" text-anchor="middle" fill="#5b6b7d">35 of 520 to 99 of 545</text>
+ <rect x="640" y="44" width="16" height="12" fill="#9fb0c3"/><text x="662" y="55" fill="#1f2937">October</text>
+ <rect x="740" y="44" width="16" height="12" fill="#0f766e"/><text x="762" y="55" fill="#1f2937">November</text>
+ </g>
+</svg>
+</div>
+<ul>
+ <li>Both markets: 258 of 3,161 first retries paid (8.2%) in October. 428 of 3,639 paid (11.8%) in November.</li>
+ <li>United States: 223 of 2,641 (8.4%) rose to 329 of 3,094 (10.6%).</li>
+ <li>Canada: 35 of 520 (6.7%) rose to 99 of 545 (18.2%).</li>
+</ul>
+<div class="warn"><b>Read this with care.</b> The gain belongs to the whole new model. Since 4 November the rules also retry more wordings, for example "LIMIT EXCEEDED" and "REFUSED". How much of the gain comes from the wait and how much from the wider list is NOT ESTABLISHED. The figures were counted twice, from the workbook and from the retry log, on 26 November 2026.</div>
+
+<h2>Part 4. Day 8, so far</h2>
+<div class="now"><b>On the morning of 27 November 2026:</b> 515 first retries were declined again and held for day 8 (United States 413, Canada 102). No second retry had run. The first was due on 28 November at 02:16 Mountain time. The day 8 result is NOT ESTABLISHED yet. It is counted apart from day 4.</div>
+
+<h2>Part 5. What we watch every morning</h2>
+<p>A morning check reads the retry log every day. These are its findings for 27 November 2026.</p>
+<table>
+ <tr><th>Check</th><th>27 Nov 2026</th></tr>
+ <tr><td>Retries due more than 3 hours ago with nothing logged</td><td><b style="color:#b91c1c">38 to look at</b> (3 new overnight)</td></tr>
+ <tr><td>Retries outside their wait (retry 1: 70 to 80 hours, retry 2: 90 to 102 hours)</td><td>0</td></tr>
+ <tr><td>An order charged again after an approved retry, or more than two retries</td><td>0 overnight</td></tr>
+ <tr><td>"Send Now" skips that point at an older order (the PAYMT-533 fault)</td><td>0 of 3 skips overnight</td></tr>
+ <tr><td>Decline wordings never seen before this month</td><td>0</td></tr>
+</table>
+
+<h2>Part 6. Still open</h2>
+<ul>
+ <li>Canada "Generic Decline": one retry on day 8 is proposed. It is not live. It waits on the decision owner, Walter Portillo.</li>
+ <li>"Issuer or switch is unavailable" and "Declined - Contact card issuer" stay unretried until a rule is added.</li>
+ <li>The 38 retries that were due and never logged.</li>
+</ul>
+
+<h2>Part 7. Quick answers</h2>
+<p class="q">A customer was charged again 4 days after a decline. Is that right?</p>
+<p>Yes, when the bank said "not now". Retry 1 runs on day 4. A second retry can follow on day 8.</p>
+<p class="q">The customer's card expired. Will we keep trying it?</p>
+<p>No. An expired or closed card is in the UPDATE group. The customer must add a new card.</p>
+<p class="q">The bank said the card was stolen. Will we retry?</p>
+<p>No. Lost, stolen and fraud wordings are in the STOP group. We never retry them.</p>
+<p class="q">Can we charge on day 20?</p>
+<p>No. Nothing is charged after day 14.</p>
+<p class="q">Does this apply in every market?</p>
+<p>No. Only the United States and Canada.</p>
+
+<h2>Words in this guide</h2>
+<table class="key">
+ <tr><td><b>Dunning</b></td><td>How we try again to collect a subscription payment after the bank declines it.</td></tr>
+ <tr><td><b>Rebill</b></td><td>A later payment of a subscription, with no customer present.</td></tr>
+ <tr><td><b>Retry</b></td><td>A new attempt to charge the same order after a decline.</td></tr>
+ <tr><td><b>Wording</b></td><td>The reason the bank sends back with a decline.</td></tr>
+ <tr><td><b>Mountain time</b></td><td>The time zone the retry schedule runs on.</td></tr>
+</table>
+
+<p class="src"><b>Sources.</b></p>
+<ul class="src">
+ <li>Operating description "Subscription Payment Retry: Day 4 and Day 8", version 1.0, 16 Nov 2026 (PAYMT-403).</li>
+ <li>Fact sheet "The new dunning model, how it is doing", 26 Nov 2026 (PAYMT-403): every result counted twice.</li>
+ <li>Dunning morning findings, 27 Nov 2026 (PAYMT-403, daily folder).</li>
+ <li>Written with the training-writing rules: one idea per sentence, short sentences. No money values. Built 28 Nov 2026.</li>
+</ul>
+</div><style id="theme-toggle-style">/* theme-toggle-v2 */
+html.dark { filter: invert(0.88) hue-rotate(180deg); background: #ffffff; }
+html.dark body { background: #ffffff; }
+html.dark img, html.dark video, html.dark picture { filter: invert(1) hue-rotate(180deg); }
+#theme-toggle { position: fixed; top: 12px; right: 12px; z-index: 2147483000; padding: 6px 12px;
+  border: 1px solid #94a3b8; border-radius: 8px; background: #ffffff; color: #1e3a8a;
+  font: 600 12px 'Segoe UI', Arial, sans-serif; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+#theme-toggle:hover { background: #eef3ff; }
+@media print { #theme-toggle { display: none; } }
+</style>
+<button id="theme-toggle" type="button" aria-label="Switch between light and dark">Dark</button>
+<script id="theme-toggle-script">
+(function () {
+  var root = document.documentElement, key = 'theme:' + location.pathname;
+  var btn = document.getElementById('theme-toggle');
+  function set(dark) {
+    root.classList.toggle('dark', dark);
+    if (btn) { btn.textContent = dark ? 'Light' : 'Dark'; }
+  }
+  try { set(localStorage.getItem(key) === 'dark'); } catch (e) { set(false); }
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var dark = !root.classList.contains('dark');
+      set(dark);
+      try { localStorage.setItem(key, dark ? 'dark' : 'light'); } catch (e) {}
+    });
+  }
+})();
+</script>
+</body></html>

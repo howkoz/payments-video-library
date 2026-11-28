@@ -2,8 +2,8 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Payments Video Library</title>
 <style>
-:root{--bg:#f7f7f8;--card:#ffffff;--ink:#18181b;--mute:#52525b;--line:#e4e4e7;--accent:#4338ca;--s6:#be185d;--s5:#7c3aed;--s4:#4338ca;--s3:#0f766e;--s2:#b4532a;--s1:#1e6f6a;--sD:#6b21a8;--chip:#f4f4f5}
-@media (prefers-color-scheme:dark){:root{--bg:#0b0b0f;--card:#17171c;--ink:#f4f4f5;--mute:#a1a1aa;--line:#2a2a33;--chip:#23232b;--accent:#a5b4fc;--s6:#f9a8d4;--s5:#c4b5fd;--s4:#818cf8;--s3:#2dd4bf;--s2:#fb923c;--s1:#5eead4;--sD:#c084fc}}
+:root{--g:#2b8a3e;--bg:#f7f7f8;--card:#ffffff;--ink:#18181b;--mute:#52525b;--line:#e4e4e7;--accent:#4338ca;--s6:#be185d;--s5:#7c3aed;--s4:#4338ca;--s3:#0f766e;--s2:#b4532a;--s1:#1e6f6a;--sD:#6b21a8;--chip:#f4f4f5}
+@media (prefers-color-scheme:dark){:root{--g:#69db7c;--bg:#0b0b0f;--card:#17171c;--ink:#f4f4f5;--mute:#a1a1aa;--line:#2a2a33;--chip:#23232b;--accent:#a5b4fc;--s6:#f9a8d4;--s5:#c4b5fd;--s4:#818cf8;--s3:#2dd4bf;--s2:#fb923c;--s1:#5eead4;--sD:#c084fc}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif}
 header{padding:28px 24px 8px;max-width:1240px;margin:0 auto}
 h1{margin:0 0 4px;font-size:28px}.sub{color:var(--mute);margin:0 0 16px}
@@ -43,17 +43,23 @@ dialog video{width:100%;display:block}
 #ch button.on{background:#4338ca;border-color:#4338ca}
 #ch .gl{color:#a1a1aa;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 2px 0 8px}
 .ver.jump{color:var(--accent)}
-@media (max-width:520px){header,main,.key{padding-left:16px;padding-right:16px}main{grid-template-columns:1fr}}
+.card.short .thumb{aspect-ratio:9/16}.tag.sS{background:var(--s6)}
+.card.guide{border-top:4px solid var(--g)}.tag.g{background:var(--g)}.actions{flex-wrap:wrap}
+main.groups{display:block}.grp{margin:0 0 34px}.gh{font-size:22px;margin:0 0 4px}.gh span{color:var(--mute);font-size:14px;font-weight:400;margin-left:6px}
+.gs{color:var(--mute);margin:0 0 12px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.grid.tall{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+dialog.tall{width:min(440px,94vw)}dialog.tall video{max-height:82vh}
+@media (max-width:520px){header,main,.key{padding-left:16px;padding-right:16px}main,.grid,.grid.tall{grid-template-columns:1fr}}
 </style></head><body>
 <header>
   <h1>Payments Video Library</h1>
-  <p class="sub">19 videos. Click a picture to play.</p>
+  <p class="sub">19 videos, 2 sixty-second videos and 2 guides. Click a picture to play.</p>
   <div class="bar" role="toolbar">
     <button class="chip on" data-f="all" hidden>All</button>
     <input type="search" placeholder="Search a title or ticket, for example PAYMT-498" aria-label="Search">
   </div>
 </header>
-<main>
+<main class="groups"><section class="grp"><h2 class="gh">Videos <span>19</span></h2><div class="grid">
 <article class="card" data-style="6" data-search="a replaced card still works v1, with the opening, married look, the updater and the token, kaycee, paymt-631 paymt-631 6 married: glass and light with 3d worlds">
   <button class="thumb" data-play="2026-11-26%20A%20replaced%20card%20still%20works%20%28v1%2C%20with%20the%20opening%2C%20married%20look%2C%20the%20updater%20and%20the%20token%2C%20Kaycee%2C%20PAYMT-631%29.mp4" data-title="A replaced card still works" aria-label="Play A replaced card still works">
     <img src="_thumbs/2026-11-26 A replaced card still works (v1, with the opening, married look, the updater and the token, Kaycee, PAYMT-631).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">1 min 58 s</span>
@@ -300,7 +306,49 @@ dialog video{width:100%;display:block}
     <div class="actions"><a class="btn" href="2026-11-23%20reCAPTCHA%20v3%20explained%2C%20short%20%28v8%2C%20with%20the%20opening%2C%20married%20look%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" data-play="2026-11-23%20reCAPTCHA%20v3%20explained%2C%20short%20%28v8%2C%20with%20the%20opening%2C%20married%20look%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" data-title="reCAPTCHA v3 explained, short">Play</a><a class="btn ghost" href="2026-11-23%20reCAPTCHA%20v3%20explained%2C%20short%20%28v8%2C%20with%20the%20opening%2C%20married%20look%2C%20the%20score%20ring%2C%20Kaycee%2C%20PAYMT-498%29.mp4" download>Download (47.5 MB)</a></div>
     
   </div>
-</article></main>
+</article></div></section><section class="grp"><h2 class="gh">60-second videos <span>2</span></h2><p class="gs">Phone-shaped shorts: one idea per number, about a minute.</p><div class="grid tall">
+<article class="card short" data-style="S" data-search="the network transaction id, five things v1, vertical short, the tall opening, kaycee, paymt-197 paymt-197 60-second short">
+  <button class="thumb" data-play="2026-11-28%20The%20Network%20Transaction%20ID%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%2C%20PAYMT-197%29.mp4" data-tall="1" data-title="The Network Transaction ID, five things" aria-label="Play The Network Transaction ID, five things">
+    <img src="_thumbs/2026-11-28 The Network Transaction ID, five things (v1, vertical short, the tall opening, Kaycee, PAYMT-197).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">1 min 09 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="tag t">PAYMT-197</span><span class="date">2026-11-28</span></div>
+    <h2>The Network Transaction ID, five things</h2>
+    <p class="about"></p>
+    <p class="ver">Version 1</p>
+    <div class="actions"><a class="btn" href="2026-11-28%20The%20Network%20Transaction%20ID%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%2C%20PAYMT-197%29.mp4" data-play="2026-11-28%20The%20Network%20Transaction%20ID%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%2C%20PAYMT-197%29.mp4" data-tall="1" data-title="The Network Transaction ID, five things">Play</a><a class="btn ghost" href="2026-11-28%20The%20Network%20Transaction%20ID%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%2C%20PAYMT-197%29.mp4" download>Download (8.2 MB)</a></div>
+    
+  </div>
+</article>
+<article class="card short" data-style="S" data-search="the orchestrator, where it stands, five things v1, vertical short, the tall opening, kaycee  60-second short">
+  <button class="thumb" data-play="2026-11-28%20The%20orchestrator%2C%20where%20it%20stands%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%29.mp4" data-tall="1" data-title="The orchestrator, where it stands, five things" aria-label="Play The orchestrator, where it stands, five things">
+    <img src="_thumbs/2026-11-28 The orchestrator, where it stands, five things (v1, vertical short, the tall opening, Kaycee).jpg" alt="" loading="lazy"><span class="play">&#9654;</span><span class="dur">1 min 16 s</span>
+  </button>
+  <div class="body">
+    <div class="tags"><span class="date">2026-11-28</span></div>
+    <h2>The orchestrator, where it stands, five things</h2>
+    <p class="about"></p>
+    <p class="ver">Version 1</p>
+    <div class="actions"><a class="btn" href="2026-11-28%20The%20orchestrator%2C%20where%20it%20stands%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%29.mp4" data-play="2026-11-28%20The%20orchestrator%2C%20where%20it%20stands%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%29.mp4" data-tall="1" data-title="The orchestrator, where it stands, five things">Play</a><a class="btn ghost" href="2026-11-28%20The%20orchestrator%2C%20where%20it%20stands%2C%20five%20things%20%28v1%2C%20vertical%20short%2C%20the%20tall%20opening%2C%20Kaycee%29.mp4" download>Download (8.6 MB)</a></div>
+    
+  </div>
+</article></div></section><section class="grp"><h2 class="gh">Guides <span>2</span></h2><p class="gs">Training guides. Each one is built three ways: the page, Word and PowerPoint (PDF too).</p><div class="grid">
+<article class="card guide" data-style="G" data-search="the network transaction id and the network token paymt-197 guide">
+  <div class="body">
+    <div class="tags"><span class="tag g">Guide</span><span class="tag t">PAYMT-197</span><span class="date">2026-11-28</span></div>
+    <h2>The Network Transaction ID and the network token</h2>
+    <p class="about">A training guide, built three ways: read the page, or take the Word document or the PowerPoint deck.</p>
+    <div class="actions"><a class="btn" href="guides/Guide-NTI-and-Network-Token-28Nov2026/Guide-NTI-and-Network-Token-28Nov2026.html" target="_blank" rel="noopener">Page</a><a class="btn" href="guides/Guide-NTI-and-Network-Token-28Nov2026/Guide-NTI-and-Network-Token-28Nov2026.docx" download>Word</a><a class="btn" href="guides/Guide-NTI-and-Network-Token-28Nov2026/Guide-NTI-and-Network-Token-28Nov2026.pptx" download>PowerPoint</a><a class="btn ghost" href="guides/Guide-NTI-and-Network-Token-28Nov2026/Guide-NTI-and-Network-Token-28Nov2026.pdf" target="_blank" rel="noopener">PDF</a></div>
+  </div>
+</article>
+<article class="card guide" data-style="G" data-search="the new dunning program, to date paymt-403 guide">
+  <div class="body">
+    <div class="tags"><span class="tag g">Guide</span><span class="tag t">PAYMT-403</span><span class="date">2026-11-28</span></div>
+    <h2>The new dunning program, to date</h2>
+    <p class="about">A training guide, built three ways: read the page, or take the Word document or the PowerPoint deck.</p>
+    <div class="actions"><a class="btn" href="guides/Guide-New-Dunning-Program-To-Date-28Nov2026/Guide-New-Dunning-Program-To-Date-28Nov2026.html" target="_blank" rel="noopener">Page</a><a class="btn" href="guides/Guide-New-Dunning-Program-To-Date-28Nov2026/Guide-New-Dunning-Program-To-Date-28Nov2026.docx" download>Word</a><a class="btn" href="guides/Guide-New-Dunning-Program-To-Date-28Nov2026/Guide-New-Dunning-Program-To-Date-28Nov2026.pptx" download>PowerPoint</a><a class="btn ghost" href="guides/Guide-New-Dunning-Program-To-Date-28Nov2026/Guide-New-Dunning-Program-To-Date-28Nov2026.pdf" target="_blank" rel="noopener">PDF</a></div>
+  </div>
+</article></div></section></main>
 <p class="key">Key: PAYMT is the prefix of a ticket in the Payments Space in ClickUp.</p>
 <dialog id="d"><div class="dh"><span id="dt"></span><button aria-label="Close">&times;</button></div><video id="v" controls></video><div id="ch"></div></dialog>
 <script>
@@ -324,7 +372,7 @@ function setup(src){ch.innerHTML='';[...v.querySelectorAll('track')].forEach(t=>
   (m.ch||[]).forEach(c=>{if(c[2]){const g=document.createElement('span');g.className='gl';g.textContent=c[2];ch.appendChild(g)}
     const b=document.createElement('button');b.textContent=c[1];b.dataset.t=c[0];b.onclick=()=>{v.currentTime=c[0];v.play().catch(()=>{})};ch.appendChild(b)})}
 v.addEventListener('timeupdate',()=>{const bs=[...ch.querySelectorAll('button')];let cur=null;bs.forEach(b=>{if(+b.dataset.t<=v.currentTime+.05)cur=b});bs.forEach(b=>b.classList.toggle('on',b===cur))});
-document.addEventListener('click',e=>{const a=e.target.closest('[data-play]');if(!a)return;e.preventDefault();v.src=a.dataset.play;setup(a.dataset.play);dt.textContent=a.dataset.title;d.showModal();v.play().catch(()=>{})});
+document.addEventListener('click',e=>{const a=e.target.closest('[data-play]');if(!a)return;e.preventDefault();d.classList.toggle('tall',!!a.dataset.tall);v.src=a.dataset.play;setup(a.dataset.play);dt.textContent=a.dataset.title;d.showModal();v.play().catch(()=>{})});
 d.querySelector('button').onclick=()=>d.close();d.addEventListener('close',()=>{v.pause();v.removeAttribute('src');v.load();ch.innerHTML=''});
 d.addEventListener('click',e=>{if(e.target===d)d.close()});
 </script>
